@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PkR-35-Y1G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="jgl-sy-Dm9">
+            <objects>
+                <viewController title="Camera" id="Q1E-CT-DOY" customClass="CameraController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ap8-Gv-N4F"/>
+                        <viewControllerLayoutGuide type="bottom" id="VMH-aS-sRK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ONc-hO-nFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sa2-17-BQd"/>
+                    <connections>
+                        <segue destination="pM0-2Y-MUb" kind="presentation" identifier="toForms" id="Lf6-Ob-HmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKV-MK-3pP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599.1999999999998" y="4359.6701649175411"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="phT-xO-FGv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PkR-35-Y1G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" id="8jj-tg-jq6"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dpr-Vn-TbN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q1E-CT-DOY" kind="relationship" relationship="rootViewController" id="3Kq-BE-h0w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elm-NG-shf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="4359.6701649175411"/>
+        </scene>
+        <!--Forms-->
+        <scene sceneID="Oid-aZ-1Sp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Forms" id="pM0-2Y-MUb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvR-eg-TX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3900" y="4341.6791604197906"/>
+        </scene>
+    </scenes>
+</document>

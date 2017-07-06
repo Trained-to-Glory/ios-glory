@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WYN-nk-4hJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment Controller-->
+        <scene sceneID="FWM-2x-fbJ">
+            <objects>
+                <viewController id="xts-C3-cIa" customClass="PaymentController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tvi-HF-0Ab"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ir-vP-Ak7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XiL-Qa-JcI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b6K-RI-0yK"/>
+                    <connections>
+                        <segue destination="B49-w0-Ytx" kind="presentation" identifier="toPaymentCompletion" id="6Y4-gX-DgB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n46-S8-jrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680.8000000000002" y="920.68965517241384"/>
+        </scene>
+        <!--Payment Complete Controller-->
+        <scene sceneID="6lh-Ms-8Lf">
+            <objects>
+                <viewController id="X99-vv-sDc" customClass="PaymentCompleteController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="abd-LX-eQd"/>
+                        <viewControllerLayoutGuide type="bottom" id="si0-nN-P6i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MqA-DE-C3z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zeb-BO-goT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39d-bj-a3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6429.6000000000004" y="929.68515742128943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2SI-yn-nD3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WYN-nk-4hJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cYM-ek-fpW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xts-C3-cIa" kind="relationship" relationship="rootViewController" id="weV-AF-4GA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhT-pN-lc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3741.5999999999999" y="920.68965517241384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="INc-Vd-AEl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B49-w0-Ytx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DLU-uv-nUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X99-vv-sDc" kind="relationship" relationship="rootViewController" id="SM3-5F-Cyc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cik-AZ-roD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5490.3999999999996" y="929.68515742128943"/>
+        </scene>
+    </scenes>
+</document>

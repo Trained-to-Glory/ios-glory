@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="txA-GK-LJr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connect-->
+        <scene sceneID="dH0-7E-JTb">
+            <objects>
+                <viewController title="Connect" id="zoA-ku-Ba3" customClass="ConnectController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KgH-K3-q2l"/>
+                        <viewControllerLayoutGuide type="bottom" id="IsT-PV-wUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMd-l4-zCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IQf-N0-ag5"/>
+                    <connections>
+                        <segue destination="MFJ-R3-5xQ" kind="presentation" identifier="toPayment" id="Mf4-aE-4dG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ht3-dp-Ktu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919.1999999999998" y="912.5937031484259"/>
+        </scene>
+        <!--Connect-->
+        <scene sceneID="ZAr-56-xGP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="txA-GK-LJr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Connect" id="VQd-KP-99m"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qsw-Z0-JMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zoA-ku-Ba3" kind="relationship" relationship="rootViewController" id="x5P-td-Lsx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyI-aG-8uF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="930"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="2fK-6j-EmV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" id="MFJ-R3-5xQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXo-d0-PWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3741.5999999999999" y="920.68965517241384"/>
+        </scene>
+    </scenes>
+</document>
