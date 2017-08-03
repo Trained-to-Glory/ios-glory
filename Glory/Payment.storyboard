@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WYN-nk-4hJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WYN-nk-4hJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,21 +13,33 @@
         <scene sceneID="FWM-2x-fbJ">
             <objects>
                 <viewController id="xts-C3-cIa" customClass="PaymentController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tvi-HF-0Ab"/>
-                        <viewControllerLayoutGuide type="bottom" id="8Ir-vP-Ak7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XiL-Qa-JcI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" id="b6K-RI-0yK"/>
                     <connections>
+                        <outlet property="spinner" destination="utr-VP-ztr" id="3Ai-dt-noy"/>
                         <segue destination="B49-w0-Ytx" kind="presentation" identifier="toPaymentCompletion" id="6Y4-gX-DgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n46-S8-jrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Donate" id="XaM-Gs-bps">
+                    <barButtonItem key="leftBarButtonItem" id="rpZ-Yn-Jp3">
+                        <view key="customView" contentMode="scaleToFill" id="IGB-mr-G9w">
+                            <rect key="frame" x="16" y="5.5" width="50" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="utr-VP-ztr">
+                                    <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </barButtonItem>
+                    <barButtonItem key="rightBarButtonItem" title="Send" id="XBa-Sl-jm1">
+                        <connections>
+                            <action selector="donate:" destination="xts-C3-cIa" id="Aet-iK-mnH"/>
+                        </connections>
+                    </barButtonItem>
+                </navigationItem>
             </objects>
             <point key="canvasLocation" x="4680.8000000000002" y="920.68965517241384"/>
         </scene>

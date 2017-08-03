@@ -1,0 +1,28 @@
+[{
+  "pursuitId": 1,
+  "steps": [{
+    "isComplete": true,
+    "text": "Keep working",
+    "position": 1,
+    "isVisible": true,
+    "stepId": 4
+    }]
+  },{
+    "pursuitId": 2,
+    "steps": [{
+      "isComplete": true,
+      "text": "Keep working",
+      "position": 1,
+      "isVisible": true,
+      "stepId": 5
+  }]
+},{
+  "pursuitId": 3,
+  "steps": [{
+    "isComplete": true,
+    "text": "Keep working",
+    "position": 1,
+    "isVisible": true,
+    "stepId": 6
+  }]
+}]

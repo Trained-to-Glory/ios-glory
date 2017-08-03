@@ -1,0 +1,55 @@
+[{
+  "userId": 122,
+    "added": [{
+          "addedId": 321,
+          "addedUsername": "john",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        },{
+          "addedId": 322,
+          "addedUsername": "phil",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        },{
+          "addedId": 323,
+          "addedUsername": "tom",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        }]
+},{
+  "userId": 123,
+    "added": [{
+          "addedId": 322,
+          "addedUsername": "john",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        },{
+          "addedId": 324,
+          "addedUsername": "phil",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        },{
+          "addedId": 325,
+          "addedUsername": "tom",
+          "addedPhoto" : "photo.jpg",
+          "isAdded" : false
+        }]
+  },{
+    "userId": 124,
+      "added": [{
+            "addedId": 324,
+            "addedUsername": "john",
+            "addedPhoto" : "photo.jpg",
+            "isAdded" : false
+          },{
+            "addedId": 325,
+            "addedUsername": "phil",
+            "addedPhoto" : "photo.jpg",
+            "isAdded" : false
+          },{
+            "addedId": 326,
+            "addedUsername": "tom",
+            "addedPhoto" : "photo.jpg",
+            "isAdded" : false
+          }]
+    }]

@@ -77,29 +77,15 @@ class CalendarModel {
         
     }
     
-    func getListOfEventDetails(userId : String, eventId : String) {
-        let getListOfEventDetails : [String: Any] = [
-            "tableName": "form",
-            "eventId" : eventId
-        ]
-        
-        let functionName = "lambda-functions-dev-accounts"
-        lambda.sendFunction(functionName: functionName, jsonObject: getListOfEventDetails)
-        
-    }
-    
     
     //MARK: - Update Methods
     
-    func updateEventAdded(userId : String, eventId : String, addedId : String?, addedUsername : String?, addedPhoto : UIImage?, isAdded : Bool?) {
+    func updateEventAdded(userId : String, eventId : String, addedId : String?, isAdded : Bool?) {
         let updatedUserEvent : [String: Any] = [
             "eventId" : eventId,
             "userId" : userId,
             "added" : [
-                addedId! : ["addedUsername" : addedUsername!,
-                            "addedPhoto" : addedPhoto!,
-                            "isAdded" : isAdded!
-                ]
+                addedId! : ["isAdded" : isAdded!]
             ]
         ]
         

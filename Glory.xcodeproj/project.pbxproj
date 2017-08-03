@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D06A8954C800841B2FFD979E /* Pods_Glory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B852E70D90F9EEE6E4B761A7 /* Pods_Glory.framework */; };
+		E60E94D51F27F4EC003CDDEE /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E94D41F27F4EC003CDDEE /* ContactsController.swift */; };
+		E61641CD1F2A9A9D0013849E /* FormTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61641CC1F2A9A9D0013849E /* FormTableCell.swift */; };
+		E61641CF1F2A9AEA0013849E /* FormTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61641CE1F2A9AEA0013849E /* FormTableDelegate.swift */; };
+		E61641D11F2A9D860013849E /* UserPoolsUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61641D01F2A9D860013849E /* UserPoolsUIHelper.swift */; };
+		E61641D31F2A9DCF0013849E /* UserPoolsSignUpConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61641D21F2A9DCF0013849E /* UserPoolsSignUpConfirmationViewController.swift */; };
 		E6194CA71EFEB5EB004764D5 /* ConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6194CA61EFEB5EB004764D5 /* ConnectModel.swift */; };
 		E6194CA91EFEB641004764D5 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6194CA81EFEB641004764D5 /* NewsModel.swift */; };
 		E6194CAB1EFEB679004764D5 /* SystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6194CAA1EFEB679004764D5 /* SystemsModel.swift */; };
@@ -56,14 +61,129 @@
 		E61972C01EFDE2B8008F1F43 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61972BF1EFDE2B8008F1F43 /* Notifications.storyboard */; };
 		E61972C21EFDE2CB008F1F43 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61972C11EFDE2CB008F1F43 /* Settings.storyboard */; };
 		E61972C41EFDE2DF008F1F43 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61972C31EFDE2DF008F1F43 /* Messages.storyboard */; };
+		E61AB02B1F2AA847001BF86E /* TableInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02A1F2AA847001BF86E /* TableInputCell.swift */; };
+		E61AB02D1F2AB77E001BF86E /* SigninExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */; };
+		E61AB02F1F2AC00A001BF86E /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */; };
+		E634F46C1F3295D900062E68 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F45E1F3295D400062E68 /* accounts.json */; };
+		E634F46D1F3295D900062E68 /* calendarDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F45F1F3295D400062E68 /* calendarDetails.json */; };
+		E634F46E1F3295D900062E68 /* engagements.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4601F3295D500062E68 /* engagements.json */; };
+		E634F46F1F3295D900062E68 /* accountDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4611F3295D500062E68 /* accountDetails.json */; };
+		E634F4701F3295D900062E68 /* pursuitDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4621F3295D500062E68 /* pursuitDetails.json */; };
+		E634F4711F3295D900062E68 /* forms.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4631F3295D600062E68 /* forms.json */; };
+		E634F4721F3295D900062E68 /* formDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4641F3295D600062E68 /* formDetails.json */; };
+		E634F4731F3295D900062E68 /* pursuit.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4651F3295D700062E68 /* pursuit.json */; };
+		E634F4741F3295D900062E68 /* accountAdded.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4661F3295D700062E68 /* accountAdded.json */; };
+		E634F4751F3295D900062E68 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4671F3295D700062E68 /* posts.json */; };
+		E634F4761F3295D900062E68 /* interests.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4681F3295D700062E68 /* interests.json */; };
+		E634F4771F3295D900062E68 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4691F3295D800062E68 /* calendar.json */; };
+		E634F4781F3295D900062E68 /* userInterests.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F46A1F3295D800062E68 /* userInterests.json */; };
+		E634F4791F3295D900062E68 /* pursuitSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F46B1F3295D900062E68 /* pursuitSteps.json */; };
+		E634F47B1F33678D00062E68 /* ProfileJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47A1F33678D00062E68 /* ProfileJSON.swift */; };
+		E634F47D1F33695700062E68 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47C1F33695700062E68 /* PostJSON.swift */; };
+		E634F47F1F33699B00062E68 /* InterestsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47E1F33699B00062E68 /* InterestsJSON.swift */; };
+		E634F4811F3369EE00062E68 /* PursuitJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F4801F3369EE00062E68 /* PursuitJSON.swift */; };
 		E63A7E7D1F0EAFAF00AD6A98 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */; };
+		E68DE2A71F0EF66B00B55962 /* CalendarJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */; };
+		E6904F331F33803500F2EEEB /* accountAdded.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F251F33803500F2EEEB /* accountAdded.json */; };
+		E6904F341F33803500F2EEEB /* accountDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F261F33803500F2EEEB /* accountDetails.json */; };
+		E6904F351F33803500F2EEEB /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F271F33803500F2EEEB /* accounts.json */; };
+		E6904F361F33803500F2EEEB /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F281F33803500F2EEEB /* calendar.json */; };
+		E6904F371F33803500F2EEEB /* calendarDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F291F33803500F2EEEB /* calendarDetails.json */; };
+		E6904F381F33803500F2EEEB /* engagements.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2A1F33803500F2EEEB /* engagements.json */; };
+		E6904F391F33803500F2EEEB /* formDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2B1F33803500F2EEEB /* formDetails.json */; };
+		E6904F3A1F33803600F2EEEB /* forms.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2C1F33803500F2EEEB /* forms.json */; };
+		E6904F3B1F33803600F2EEEB /* interests.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2D1F33803500F2EEEB /* interests.json */; };
+		E6904F3C1F33803600F2EEEB /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2E1F33803500F2EEEB /* posts.json */; };
+		E6904F3D1F33803600F2EEEB /* pursuit.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2F1F33803500F2EEEB /* pursuit.json */; };
+		E6904F3E1F33803600F2EEEB /* pursuitDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F301F33803500F2EEEB /* pursuitDetails.json */; };
+		E6904F3F1F33803600F2EEEB /* pursuitSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F311F33803500F2EEEB /* pursuitSteps.json */; };
+		E6904F401F33803600F2EEEB /* userInterests.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F321F33803500F2EEEB /* userInterests.json */; };
+		E6BE5C491F2B9AF100CEB872 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */; };
+		E6BE5C4A1F2B9AF100CEB872 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C4B1F2B9AF800CEB872 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */; };
+		E6BE5C4C1F2B9AF800CEB872 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C4D1F2B9B0900CEB872 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C471F2B9AE900CEB872 /* AWSCognitoIdentityProvider.framework */; };
+		E6BE5C4E1F2B9B0900CEB872 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C471F2B9AE900CEB872 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C4F1F2B9B0F00CEB872 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C441F2B9AE700CEB872 /* AWSDynamoDB.framework */; };
+		E6BE5C501F2B9B0F00CEB872 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C441F2B9AE700CEB872 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C511F2B9B1500CEB872 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C481F2B9AE900CEB872 /* AWSS3.framework */; };
+		E6BE5C521F2B9B1500CEB872 /* AWSS3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C481F2B9AE900CEB872 /* AWSS3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C591F2B9C0400CEB872 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C581F2B9BFD00CEB872 /* AWSCognito.framework */; };
+		E6BE5C5A1F2B9C0400CEB872 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C581F2B9BFD00CEB872 /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BE5C7A1F2B9E7200CEB872 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C5D1F2B9E7000CEB872 /* AddressBook.framework */; };
+		E6BE5C7B1F2B9E7200CEB872 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6BE5C5E1F2B9E7200CEB872 /* GoogleSignIn.bundle */; };
+		E6BE5C7C1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6BE5C5F1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle */; };
+		E6BE5C7D1F2B9E7200CEB872 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C601F2B9E7200CEB872 /* GoogleAuthUtilities.framework */; };
+		E6BE5C7E1F2B9E7200CEB872 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C611F2B9E7200CEB872 /* AWSCognitoIdentityProvider.framework */; };
+		E6BE5C7F1F2B9E7200CEB872 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C621F2B9E7200CEB872 /* AWSAPIGateway.framework */; };
+		E6BE5C801F2B9E7200CEB872 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C631F2B9E7200CEB872 /* AWSCognito.framework */; };
+		E6BE5C811F2B9E7200CEB872 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C641F2B9E7200CEB872 /* GoogleSymbolUtilities.framework */; };
+		E6BE5C821F2B9E7200CEB872 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C651F2B9E7200CEB872 /* GoogleAppUtilities.framework */; };
+		E6BE5C831F2B9E7200CEB872 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C661F2B9E7200CEB872 /* AWSS3.framework */; };
+		E6BE5C841F2B9E7200CEB872 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C671F2B9E7200CEB872 /* AWSMobileHubHelper.framework */; };
+		E6BE5C851F2B9E7200CEB872 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C681F2B9E7200CEB872 /* AWSDynamoDB.framework */; };
+		E6BE5C861F2B9E7200CEB872 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C691F2B9E7200CEB872 /* GoogleNetworkingUtilities.framework */; };
+		E6BE5C871F2B9E7200CEB872 /* AWSCognitoUserPoolsSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6A1F2B9E7200CEB872 /* AWSCognitoUserPoolsSignIn.framework */; };
+		E6BE5C881F2B9E7200CEB872 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6B1F2B9E7200CEB872 /* GoogleUtilities.framework */; };
+		E6BE5C891F2B9E7200CEB872 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6C1F2B9E7200CEB872 /* GoogleSignIn.framework */; };
+		E6BE5C8A1F2B9E7200CEB872 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6D1F2B9E7200CEB872 /* AWSCore.framework */; };
+		E6BE5C8B1F2B9E7200CEB872 /* AWSGoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6E1F2B9E7200CEB872 /* AWSGoogleSignIn.framework */; };
+		E6BE5C8C1F2B9E7200CEB872 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C6F1F2B9E7200CEB872 /* MediaPlayer.framework */; };
+		E6BE5C8D1F2B9E7200CEB872 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C701F2B9E7200CEB872 /* AVFoundation.framework */; };
+		E6BE5C8E1F2B9E7200CEB872 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C711F2B9E7200CEB872 /* Security.framework */; };
+		E6BE5C8F1F2B9E7200CEB872 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C721F2B9E7200CEB872 /* libz.tbd */; };
+		E6BE5C901F2B9E7200CEB872 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C731F2B9E7200CEB872 /* libsqlite3.tbd */; };
+		E6BE5C911F2B9E7200CEB872 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C741F2B9E7200CEB872 /* CFNetwork.framework */; };
+		E6BE5C921F2B9E7200CEB872 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C751F2B9E7200CEB872 /* UIKit.framework */; };
+		E6BE5C931F2B9E7200CEB872 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C761F2B9E7200CEB872 /* SystemConfiguration.framework */; };
+		E6BE5C941F2B9E7200CEB872 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C771F2B9E7200CEB872 /* SafariServices.framework */; };
+		E6BE5C951F2B9E7300CEB872 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C781F2B9E7200CEB872 /* AVKit.framework */; };
+		E6BE5C961F2B9E7300CEB872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C791F2B9E7200CEB872 /* Foundation.framework */; };
 		E6DD47E01EFEB106003079C4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD47DF1EFEB106003079C4 /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E61642251F2AA41E0013849E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E6BE5C5A1F2B9C0400CEB872 /* AWSCognito.framework in Embed Frameworks */,
+				E6BE5C4A1F2B9AF100CEB872 /* AWSAPIGateway.framework in Embed Frameworks */,
+				E6BE5C4E1F2B9B0900CEB872 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				E6BE5C501F2B9B0F00CEB872 /* AWSDynamoDB.framework in Embed Frameworks */,
+				E6BE5C4C1F2B9AF800CEB872 /* AWSCore.framework in Embed Frameworks */,
+				E6BE5C521F2B9B1500CEB872 /* AWSS3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		698489EB70D609DC9EC7B88C /* Pods-Glory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Glory/Pods-Glory.debug.xcconfig"; sourceTree = "<group>"; };
 		95730F128733AC21FCD31C6F /* Pods-Glory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Glory/Pods-Glory.release.xcconfig"; sourceTree = "<group>"; };
 		B852E70D90F9EEE6E4B761A7 /* Pods_Glory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E94D41F27F4EC003CDDEE /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		E61641CC1F2A9A9D0013849E /* FormTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableCell.swift; sourceTree = "<group>"; };
+		E61641CE1F2A9AEA0013849E /* FormTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableDelegate.swift; sourceTree = "<group>"; };
+		E61641D01F2A9D860013849E /* UserPoolsUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoolsUIHelper.swift; sourceTree = "<group>"; };
+		E61641D21F2A9DCF0013849E /* UserPoolsSignUpConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoolsSignUpConfirmationViewController.swift; sourceTree = "<group>"; };
+		E61641D61F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.h; sourceTree = "<group>"; };
+		E61641D71F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.m; sourceTree = "<group>"; };
+		E61641D81F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_RequestSchema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSAPI_J5F6MFS1L5_RequestSchema.h; sourceTree = "<group>"; };
+		E61641D91F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_RequestSchema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_J5F6MFS1L5_RequestSchema.m; sourceTree = "<group>"; };
+		E61641DA1F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_ResponseSchema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSAPI_J5F6MFS1L5_ResponseSchema.h; sourceTree = "<group>"; };
+		E61641DB1F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_ResponseSchema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_J5F6MFS1L5_ResponseSchema.m; sourceTree = "<group>"; };
+		E61641DC1F2A9FFF0013849E /* AWSCognitoUserPoolsSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoUserPoolsSignIn.framework; sourceTree = "<group>"; };
+		E61641DD1F2A9FFF0013849E /* AWSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		E61641DE1F2A9FFF0013849E /* AWSGoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSGoogleSignIn.framework; sourceTree = "<group>"; };
+		E61641DF1F2A9FFF0013849E /* AWSGoogleSignInResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AWSGoogleSignInResources.bundle; sourceTree = "<group>"; };
+		E61641E01F2A9FFF0013849E /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		E61641E11F2A9FFF0013849E /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		E61641E21F2A9FFF0013849E /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		E61641E51F2A9FFF0013849E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		E6194CA61EFEB5EB004764D5 /* ConnectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectModel.swift; sourceTree = "<group>"; };
 		E6194CA81EFEB641004764D5 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		E6194CAA1EFEB679004764D5 /* SystemsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsModel.swift; sourceTree = "<group>"; };
@@ -114,7 +234,80 @@
 		E61972BF1EFDE2B8008F1F43 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		E61972C11EFDE2CB008F1F43 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		E61972C31EFDE2DF008F1F43 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		E61AB02A1F2AA847001BF86E /* TableInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInputCell.swift; sourceTree = "<group>"; };
+		E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninExtension.swift; sourceTree = "<group>"; };
+		E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
+		E634F45E1F3295D400062E68 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accounts.json; path = "../../../Lambda-Functions/serverless-crud/json/accounts.json"; sourceTree = "<group>"; };
+		E634F45F1F3295D400062E68 /* calendarDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = calendarDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/calendarDetails.json"; sourceTree = "<group>"; };
+		E634F4601F3295D500062E68 /* engagements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = engagements.json; path = "../../../Lambda-Functions/serverless-crud/json/engagements.json"; sourceTree = "<group>"; };
+		E634F4611F3295D500062E68 /* accountDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accountDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/accountDetails.json"; sourceTree = "<group>"; };
+		E634F4621F3295D500062E68 /* pursuitDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuitDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuitDetails.json"; sourceTree = "<group>"; };
+		E634F4631F3295D600062E68 /* forms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = forms.json; path = "../../../Lambda-Functions/serverless-crud/json/forms.json"; sourceTree = "<group>"; };
+		E634F4641F3295D600062E68 /* formDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = formDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/formDetails.json"; sourceTree = "<group>"; };
+		E634F4651F3295D700062E68 /* pursuit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuit.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuit.json"; sourceTree = "<group>"; };
+		E634F4661F3295D700062E68 /* accountAdded.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accountAdded.json; path = "../../../Lambda-Functions/serverless-crud/json/accountAdded.json"; sourceTree = "<group>"; };
+		E634F4671F3295D700062E68 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = posts.json; path = "../../../Lambda-Functions/serverless-crud/json/posts.json"; sourceTree = "<group>"; };
+		E634F4681F3295D700062E68 /* interests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = interests.json; path = "../../../Lambda-Functions/serverless-crud/json/interests.json"; sourceTree = "<group>"; };
+		E634F4691F3295D800062E68 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = calendar.json; path = "../../../Lambda-Functions/serverless-crud/json/calendar.json"; sourceTree = "<group>"; };
+		E634F46A1F3295D800062E68 /* userInterests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = userInterests.json; path = "../../../Lambda-Functions/serverless-crud/json/userInterests.json"; sourceTree = "<group>"; };
+		E634F46B1F3295D900062E68 /* pursuitSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuitSteps.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuitSteps.json"; sourceTree = "<group>"; };
+		E634F47A1F33678D00062E68 /* ProfileJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJSON.swift; sourceTree = "<group>"; };
+		E634F47C1F33695700062E68 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
+		E634F47E1F33699B00062E68 /* InterestsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsJSON.swift; sourceTree = "<group>"; };
+		E634F4801F3369EE00062E68 /* PursuitJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursuitJSON.swift; sourceTree = "<group>"; };
 		E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
+		E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSON.swift; sourceTree = "<group>"; };
+		E6904F251F33803500F2EEEB /* accountAdded.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accountAdded.json; sourceTree = "<group>"; };
+		E6904F261F33803500F2EEEB /* accountDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accountDetails.json; sourceTree = "<group>"; };
+		E6904F271F33803500F2EEEB /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
+		E6904F281F33803500F2EEEB /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
+		E6904F291F33803500F2EEEB /* calendarDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendarDetails.json; sourceTree = "<group>"; };
+		E6904F2A1F33803500F2EEEB /* engagements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = engagements.json; sourceTree = "<group>"; };
+		E6904F2B1F33803500F2EEEB /* formDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = formDetails.json; sourceTree = "<group>"; };
+		E6904F2C1F33803500F2EEEB /* forms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forms.json; sourceTree = "<group>"; };
+		E6904F2D1F33803500F2EEEB /* interests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = interests.json; sourceTree = "<group>"; };
+		E6904F2E1F33803500F2EEEB /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		E6904F2F1F33803500F2EEEB /* pursuit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuit.json; sourceTree = "<group>"; };
+		E6904F301F33803500F2EEEB /* pursuitDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuitDetails.json; sourceTree = "<group>"; };
+		E6904F311F33803500F2EEEB /* pursuitSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuitSteps.json; sourceTree = "<group>"; };
+		E6904F321F33803500F2EEEB /* userInterests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userInterests.json; sourceTree = "<group>"; };
+		E6BE5C441F2B9AE700CEB872 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = Sdk/Aws/AWSDynamoDB.framework; sourceTree = "<group>"; };
+		E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAPIGateway.framework; path = Sdk/Aws/AWSAPIGateway.framework; sourceTree = "<group>"; };
+		E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Sdk/Aws/AWSCore.framework; sourceTree = "<group>"; };
+		E6BE5C471F2B9AE900CEB872 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = Sdk/Aws/AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
+		E6BE5C481F2B9AE900CEB872 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = Sdk/Aws/AWSS3.framework; sourceTree = "<group>"; };
+		E6BE5C581F2B9BFD00CEB872 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
+		E6BE5C5B1F2B9C9600CEB872 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E6BE5C5C1F2B9CCA00CEB872 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		E6BE5C5D1F2B9E7000CEB872 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		E6BE5C5E1F2B9E7200CEB872 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleSignIn.bundle"; sourceTree = "<group>"; };
+		E6BE5C5F1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AWSGoogleSignInResources.bundle; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws/AWSGoogleSignInResources.bundle"; sourceTree = "<group>"; };
+		E6BE5C601F2B9E7200CEB872 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleAuthUtilities.framework"; sourceTree = "<group>"; };
+		E6BE5C611F2B9E7200CEB872 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/AWSCognitoIdentityProvider.framework"; sourceTree = "<group>"; };
+		E6BE5C621F2B9E7200CEB872 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAPIGateway.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/AWSAPIGateway.framework"; sourceTree = "<group>"; };
+		E6BE5C631F2B9E7200CEB872 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/extras/AWSCognito.framework"; sourceTree = "<group>"; };
+		E6BE5C641F2B9E7200CEB872 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; };
+		E6BE5C651F2B9E7200CEB872 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleAppUtilities.framework"; sourceTree = "<group>"; };
+		E6BE5C661F2B9E7200CEB872 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/AWSS3.framework"; sourceTree = "<group>"; };
+		E6BE5C671F2B9E7200CEB872 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSMobileHubHelper.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws/AWSMobileHubHelper.framework"; sourceTree = "<group>"; };
+		E6BE5C681F2B9E7200CEB872 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/AWSDynamoDB.framework"; sourceTree = "<group>"; };
+		E6BE5C691F2B9E7200CEB872 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; };
+		E6BE5C6A1F2B9E7200CEB872 /* AWSCognitoUserPoolsSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoUserPoolsSignIn.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws/AWSCognitoUserPoolsSignIn.framework"; sourceTree = "<group>"; };
+		E6BE5C6B1F2B9E7200CEB872 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleUtilities.framework"; sourceTree = "<group>"; };
+		E6BE5C6C1F2B9E7200CEB872 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google/GoogleSignIn.framework"; sourceTree = "<group>"; };
+		E6BE5C6D1F2B9E7200CEB872 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/AWSCore.framework"; sourceTree = "<group>"; };
+		E6BE5C6E1F2B9E7200CEB872 /* AWSGoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSGoogleSignIn.framework; path = "../GloryUp-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws/AWSGoogleSignIn.framework"; sourceTree = "<group>"; };
+		E6BE5C6F1F2B9E7200CEB872 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E6BE5C701F2B9E7200CEB872 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E6BE5C711F2B9E7200CEB872 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E6BE5C721F2B9E7200CEB872 /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E6BE5C731F2B9E7200CEB872 /* libsqlite3.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E6BE5C741F2B9E7200CEB872 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E6BE5C751F2B9E7200CEB872 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E6BE5C761F2B9E7200CEB872 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E6BE5C771F2B9E7200CEB872 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		E6BE5C781F2B9E7200CEB872 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		E6BE5C791F2B9E7200CEB872 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6DD47DF1EFEB106003079C4 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +316,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BE5C851F2B9E7200CEB872 /* AWSDynamoDB.framework in Frameworks */,
+				E6BE5C8A1F2B9E7200CEB872 /* AWSCore.framework in Frameworks */,
+				E6BE5C901F2B9E7200CEB872 /* libsqlite3.tbd in Frameworks */,
+				E6BE5C491F2B9AF100CEB872 /* AWSAPIGateway.framework in Frameworks */,
+				E6BE5C7D1F2B9E7200CEB872 /* GoogleAuthUtilities.framework in Frameworks */,
 				D06A8954C800841B2FFD979E /* Pods_Glory.framework in Frameworks */,
+				E6BE5C7E1F2B9E7200CEB872 /* AWSCognitoIdentityProvider.framework in Frameworks */,
+				E6BE5C821F2B9E7200CEB872 /* GoogleAppUtilities.framework in Frameworks */,
+				E6BE5C951F2B9E7300CEB872 /* AVKit.framework in Frameworks */,
+				E6BE5C8B1F2B9E7200CEB872 /* AWSGoogleSignIn.framework in Frameworks */,
+				E6BE5C811F2B9E7200CEB872 /* GoogleSymbolUtilities.framework in Frameworks */,
+				E6BE5C891F2B9E7200CEB872 /* GoogleSignIn.framework in Frameworks */,
+				E6BE5C7A1F2B9E7200CEB872 /* AddressBook.framework in Frameworks */,
+				E6BE5C7F1F2B9E7200CEB872 /* AWSAPIGateway.framework in Frameworks */,
+				E6BE5C911F2B9E7200CEB872 /* CFNetwork.framework in Frameworks */,
+				E6BE5C941F2B9E7200CEB872 /* SafariServices.framework in Frameworks */,
+				E6BE5C8D1F2B9E7200CEB872 /* AVFoundation.framework in Frameworks */,
+				E6BE5C801F2B9E7200CEB872 /* AWSCognito.framework in Frameworks */,
+				E6BE5C861F2B9E7200CEB872 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				E6BE5C961F2B9E7300CEB872 /* Foundation.framework in Frameworks */,
+				E6BE5C511F2B9B1500CEB872 /* AWSS3.framework in Frameworks */,
+				E6BE5C841F2B9E7200CEB872 /* AWSMobileHubHelper.framework in Frameworks */,
+				E6BE5C921F2B9E7200CEB872 /* UIKit.framework in Frameworks */,
+				E6BE5C4B1F2B9AF800CEB872 /* AWSCore.framework in Frameworks */,
+				E6BE5C8E1F2B9E7200CEB872 /* Security.framework in Frameworks */,
+				E6BE5C4D1F2B9B0900CEB872 /* AWSCognitoIdentityProvider.framework in Frameworks */,
+				E6BE5C4F1F2B9B0F00CEB872 /* AWSDynamoDB.framework in Frameworks */,
+				E6BE5C591F2B9C0400CEB872 /* AWSCognito.framework in Frameworks */,
+				E6BE5C831F2B9E7200CEB872 /* AWSS3.framework in Frameworks */,
+				E6BE5C881F2B9E7200CEB872 /* GoogleUtilities.framework in Frameworks */,
+				E6BE5C8C1F2B9E7200CEB872 /* MediaPlayer.framework in Frameworks */,
+				E6BE5C8F1F2B9E7200CEB872 /* libz.tbd in Frameworks */,
+				E6BE5C931F2B9E7200CEB872 /* SystemConfiguration.framework in Frameworks */,
+				E6BE5C871F2B9E7200CEB872 /* AWSCognitoUserPoolsSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +368,104 @@
 		6F01A18D3E931B0B3DC37F30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6BE5C701F2B9E7200CEB872 /* AVFoundation.framework */,
+				E6BE5C781F2B9E7200CEB872 /* AVKit.framework */,
+				E6BE5C621F2B9E7200CEB872 /* AWSAPIGateway.framework */,
+				E6BE5C631F2B9E7200CEB872 /* AWSCognito.framework */,
+				E6BE5C611F2B9E7200CEB872 /* AWSCognitoIdentityProvider.framework */,
+				E6BE5C6A1F2B9E7200CEB872 /* AWSCognitoUserPoolsSignIn.framework */,
+				E6BE5C6D1F2B9E7200CEB872 /* AWSCore.framework */,
+				E6BE5C681F2B9E7200CEB872 /* AWSDynamoDB.framework */,
+				E6BE5C6E1F2B9E7200CEB872 /* AWSGoogleSignIn.framework */,
+				E6BE5C5F1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle */,
+				E6BE5C5C1F2B9CCA00CEB872 /* AWSMobileHubHelper.framework */,
+				E6BE5C5B1F2B9C9600CEB872 /* AVFoundation.framework */,
+				E6BE5C671F2B9E7200CEB872 /* AWSMobileHubHelper.framework */,
+				E6BE5C661F2B9E7200CEB872 /* AWSS3.framework */,
+				E6BE5C5D1F2B9E7000CEB872 /* AddressBook.framework */,
+				E6BE5C741F2B9E7200CEB872 /* CFNetwork.framework */,
+				E6BE5C791F2B9E7200CEB872 /* Foundation.framework */,
+				E6BE5C651F2B9E7200CEB872 /* GoogleAppUtilities.framework */,
+				E6BE5C601F2B9E7200CEB872 /* GoogleAuthUtilities.framework */,
+				E6BE5C691F2B9E7200CEB872 /* GoogleNetworkingUtilities.framework */,
+				E6BE5C5E1F2B9E7200CEB872 /* GoogleSignIn.bundle */,
+				E6BE5C6C1F2B9E7200CEB872 /* GoogleSignIn.framework */,
+				E6BE5C641F2B9E7200CEB872 /* GoogleSymbolUtilities.framework */,
+				E6BE5C6B1F2B9E7200CEB872 /* GoogleUtilities.framework */,
+				E6BE5C6F1F2B9E7200CEB872 /* MediaPlayer.framework */,
+				E6BE5C771F2B9E7200CEB872 /* SafariServices.framework */,
+				E6BE5C711F2B9E7200CEB872 /* Security.framework */,
+				E6BE5C761F2B9E7200CEB872 /* SystemConfiguration.framework */,
+				E6BE5C751F2B9E7200CEB872 /* UIKit.framework */,
+				E6BE5C731F2B9E7200CEB872 /* libsqlite3.tbd */,
+				E6BE5C721F2B9E7200CEB872 /* libz.tbd */,
 				B852E70D90F9EEE6E4B761A7 /* Pods_Glory.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E60E94D31F27F4CB003CDDEE /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E60E94D41F27F4EC003CDDEE /* ContactsController.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		E61641CB1F2A9A870013849E /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				E61641CC1F2A9A9D0013849E /* FormTableCell.swift */,
+				E61641CE1F2A9AEA0013849E /* FormTableDelegate.swift */,
+				E61641D01F2A9D860013849E /* UserPoolsUIHelper.swift */,
+				E61641D21F2A9DCF0013849E /* UserPoolsSignUpConfirmationViewController.swift */,
+				E61AB02A1F2AA847001BF86E /* TableInputCell.swift */,
+			);
+			name = Tables;
+			sourceTree = "<group>";
+		};
+		E61641D41F2A9FFF0013849E /* AmazonAws */ = {
+			isa = PBXGroup;
+			children = (
+				E61641D51F2A9FFF0013849E /* Api */,
+				E61641DC1F2A9FFF0013849E /* AWSCognitoUserPoolsSignIn.framework */,
+				E61641DD1F2A9FFF0013849E /* AWSConfiguration.swift */,
+				E61641DE1F2A9FFF0013849E /* AWSGoogleSignIn.framework */,
+				E61641DF1F2A9FFF0013849E /* AWSGoogleSignInResources.bundle */,
+				E61641E01F2A9FFF0013849E /* AWSMobileClient.swift */,
+				E61641E11F2A9FFF0013849E /* AWSMobileHubHelper.framework */,
+				E61641E31F2A9FFF0013849E /* Models */,
+			);
+			path = AmazonAws;
+			sourceTree = "<group>";
+		};
+		E61641D51F2A9FFF0013849E /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				E61641D61F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.h */,
+				E61641D71F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_GloryUpMobileHubClient.m */,
+				E61641D81F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_RequestSchema.h */,
+				E61641D91F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_RequestSchema.m */,
+				E61641DA1F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_ResponseSchema.h */,
+				E61641DB1F2A9FFF0013849E /* AWSAPI_J5F6MFS1L5_ResponseSchema.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		E61641E31F2A9FFF0013849E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E61641E41F2A9FFF0013849E /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E61641E41F2A9FFF0013849E /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				E61641E51F2A9FFF0013849E /* News.swift */,
+			);
+			path = NoSQL;
 			sourceTree = "<group>";
 		};
 		E6194C9C1EFEB4C6004764D5 /* Camera */ = {
@@ -217,6 +538,12 @@
 		E619724C1EFD52C5008F1F43 = {
 			isa = PBXGroup;
 			children = (
+				E6BE5C581F2B9BFD00CEB872 /* AWSCognito.framework */,
+				E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */,
+				E6BE5C471F2B9AE900CEB872 /* AWSCognitoIdentityProvider.framework */,
+				E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */,
+				E6BE5C441F2B9AE700CEB872 /* AWSDynamoDB.framework */,
+				E6BE5C481F2B9AE900CEB872 /* AWSS3.framework */,
 				E61972571EFD52C6008F1F43 /* Glory */,
 				E61972561EFD52C6008F1F43 /* Products */,
 				0F9C82C1EBE79C573C4D475E /* Pods */,
@@ -235,9 +562,14 @@
 		E61972571EFD52C6008F1F43 /* Glory */ = {
 			isa = PBXGroup;
 			children = (
+				E6904F241F33803500F2EEEB /* json */,
+				E634F44C1F32913400062E68 /* JSON */,
+				E61641D41F2A9FFF0013849E /* AmazonAws */,
+				E634F4821F336A3E00062E68 /* Test-Models */,
 				E61972A31EFD6043008F1F43 /* Models */,
 				E61972A41EFD6056008F1F43 /* Views */,
 				E619726A1EFD5329008F1F43 /* Controllers */,
+				E61641E21F2A9FFF0013849E /* Bridging_Header.h */,
 				E61972581EFD52C6008F1F43 /* AppDelegate.swift */,
 				E619725A1EFD52C6008F1F43 /* ViewController.swift */,
 				E619725C1EFD52C6008F1F43 /* Main.storyboard */,
@@ -251,8 +583,10 @@
 		E619726A1EFD5329008F1F43 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E61641CB1F2A9A870013849E /* Tables */,
 				E61972A11EFD5FAB008F1F43 /* Camera */,
 				E619729F1EFD5F96008F1F43 /* Connect */,
+				E60E94D31F27F4CB003CDDEE /* Contacts */,
 				E61972A21EFD5FB7008F1F43 /* Forms */,
 				E61972A01EFD5FA1008F1F43 /* Interests */,
 				E619729B1EFD5F10008F1F43 /* Messages */,
@@ -271,6 +605,8 @@
 				E619726B1EFD534D008F1F43 /* SigninController.swift */,
 				E619726D1EFD53F0008F1F43 /* SignupController.swift */,
 				E619726F1EFD5445008F1F43 /* ForgotController.swift */,
+				E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */,
+				E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -391,6 +727,61 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		E634F44C1F32913400062E68 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E634F4661F3295D700062E68 /* accountAdded.json */,
+				E634F4611F3295D500062E68 /* accountDetails.json */,
+				E634F45E1F3295D400062E68 /* accounts.json */,
+				E634F4691F3295D800062E68 /* calendar.json */,
+				E634F45F1F3295D400062E68 /* calendarDetails.json */,
+				E634F4601F3295D500062E68 /* engagements.json */,
+				E634F4641F3295D600062E68 /* formDetails.json */,
+				E634F4631F3295D600062E68 /* forms.json */,
+				E634F4681F3295D700062E68 /* interests.json */,
+				E634F4671F3295D700062E68 /* posts.json */,
+				E634F4651F3295D700062E68 /* pursuit.json */,
+				E634F4621F3295D500062E68 /* pursuitDetails.json */,
+				E634F46B1F3295D900062E68 /* pursuitSteps.json */,
+				E634F46A1F3295D800062E68 /* userInterests.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		E634F4821F336A3E00062E68 /* Test-Models */ = {
+			isa = PBXGroup;
+			children = (
+				E634F47A1F33678D00062E68 /* ProfileJSON.swift */,
+				E634F47C1F33695700062E68 /* PostJSON.swift */,
+				E634F4801F3369EE00062E68 /* PursuitJSON.swift */,
+				E634F47E1F33699B00062E68 /* InterestsJSON.swift */,
+				E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */,
+			);
+			path = "Test-Models";
+			sourceTree = "<group>";
+		};
+		E6904F241F33803500F2EEEB /* json */ = {
+			isa = PBXGroup;
+			children = (
+				E6904F251F33803500F2EEEB /* accountAdded.json */,
+				E6904F261F33803500F2EEEB /* accountDetails.json */,
+				E6904F271F33803500F2EEEB /* accounts.json */,
+				E6904F281F33803500F2EEEB /* calendar.json */,
+				E6904F291F33803500F2EEEB /* calendarDetails.json */,
+				E6904F2A1F33803500F2EEEB /* engagements.json */,
+				E6904F2B1F33803500F2EEEB /* formDetails.json */,
+				E6904F2C1F33803500F2EEEB /* forms.json */,
+				E6904F2D1F33803500F2EEEB /* interests.json */,
+				E6904F2E1F33803500F2EEEB /* posts.json */,
+				E6904F2F1F33803500F2EEEB /* pursuit.json */,
+				E6904F301F33803500F2EEEB /* pursuitDetails.json */,
+				E6904F311F33803500F2EEEB /* pursuitSteps.json */,
+				E6904F321F33803500F2EEEB /* userInterests.json */,
+			);
+			name = json;
+			path = "../../Lambda-Functions/serverless-crud/json";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +795,7 @@
 				E61972531EFD52C6008F1F43 /* Resources */,
 				7BF9B26E9B720EB1B9CA9EC9 /* [CP] Embed Pods Frameworks */,
 				B46C3370C17568D9ADD7D1D3 /* [CP] Copy Pods Resources */,
+				E61642251F2AA41E0013849E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -455,20 +847,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6904F3B1F33803600F2EEEB /* interests.json in Resources */,
 				E61972631EFD52C6008F1F43 /* LaunchScreen.storyboard in Resources */,
+				E6BE5C7B1F2B9E7200CEB872 /* GoogleSignIn.bundle in Resources */,
+				E6BE5C7C1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle in Resources */,
+				E634F4771F3295D900062E68 /* calendar.json in Resources */,
 				E61972B91EFDE23D008F1F43 /* Payment.storyboard in Resources */,
+				E634F4721F3295D900062E68 /* formDetails.json in Resources */,
 				E61972B71EFDE213008F1F43 /* Forms.storyboard in Resources */,
 				E61972B51EFDE152008F1F43 /* Camera.storyboard in Resources */,
 				E61972C41EFDE2DF008F1F43 /* Messages.storyboard in Resources */,
+				E634F4731F3295D900062E68 /* pursuit.json in Resources */,
+				E6904F3C1F33803600F2EEEB /* posts.json in Resources */,
 				E61972B01EFDE10D008F1F43 /* News.storyboard in Resources */,
 				E61972AD1EFDE0CF008F1F43 /* Connect.storyboard in Resources */,
+				E634F46C1F3295D900062E68 /* accounts.json in Resources */,
+				E634F4701F3295D900062E68 /* pursuitDetails.json in Resources */,
+				E6904F341F33803500F2EEEB /* accountDetails.json in Resources */,
+				E6904F371F33803500F2EEEB /* calendarDetails.json in Resources */,
+				E6904F401F33803600F2EEEB /* userInterests.json in Resources */,
+				E634F46F1F3295D900062E68 /* accountDetails.json in Resources */,
+				E6904F3F1F33803600F2EEEB /* pursuitSteps.json in Resources */,
 				E61972601EFD52C6008F1F43 /* Assets.xcassets in Resources */,
+				E634F4791F3295D900062E68 /* pursuitSteps.json in Resources */,
+				E6904F331F33803500F2EEEB /* accountAdded.json in Resources */,
+				E6904F361F33803500F2EEEB /* calendar.json in Resources */,
+				E634F4781F3295D900062E68 /* userInterests.json in Resources */,
 				E61972BC1EFDE253008F1F43 /* Search.storyboard in Resources */,
 				E61972A61EFDDFB4008F1F43 /* Profile.storyboard in Resources */,
+				E6904F391F33803500F2EEEB /* formDetails.json in Resources */,
+				E6904F3D1F33803600F2EEEB /* pursuit.json in Resources */,
 				E61972C01EFDE2B8008F1F43 /* Notifications.storyboard in Resources */,
+				E634F46E1F3295D900062E68 /* engagements.json in Resources */,
+				E6904F3A1F33803600F2EEEB /* forms.json in Resources */,
+				E6904F3E1F33803600F2EEEB /* pursuitDetails.json in Resources */,
+				E634F4711F3295D900062E68 /* forms.json in Resources */,
 				E619725E1EFD52C6008F1F43 /* Main.storyboard in Resources */,
+				E634F4761F3295D900062E68 /* interests.json in Resources */,
 				E61972C21EFDE2CB008F1F43 /* Settings.storyboard in Resources */,
+				E6904F381F33803500F2EEEB /* engagements.json in Resources */,
+				E634F46D1F3295D900062E68 /* calendarDetails.json in Resources */,
+				E634F4741F3295D900062E68 /* accountAdded.json in Resources */,
 				E61972B21EFDE12C008F1F43 /* Systems.storyboard in Resources */,
+				E6904F351F33803500F2EEEB /* accounts.json in Resources */,
+				E634F4751F3295D900062E68 /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,23 +955,36 @@
 				E61972981EFD5E2D008F1F43 /* SearchController.swift in Sources */,
 				E619727A1EFD57C2008F1F43 /* SystemsController.swift in Sources */,
 				E619728C1EFD5B6F008F1F43 /* CalendarController.swift in Sources */,
+				E634F4811F3369EE00062E68 /* PursuitJSON.swift in Sources */,
+				E61641D11F2A9D860013849E /* UserPoolsUIHelper.swift in Sources */,
 				E6194CAD1EFEB6C7004764D5 /* InterestsModel.swift in Sources */,
 				E61972941EFD5D62008F1F43 /* PaymentController.swift in Sources */,
+				E634F47F1F33699B00062E68 /* InterestsJSON.swift in Sources */,
+				E61AB02D1F2AB77E001BF86E /* SigninExtension.swift in Sources */,
+				E60E94D51F27F4EC003CDDEE /* ContactsController.swift in Sources */,
+				E634F47D1F33695700062E68 /* PostJSON.swift in Sources */,
 				E619728E1EFD5BF4008F1F43 /* NotificationsController.swift in Sources */,
 				E61972801EFD58D7008F1F43 /* SettingsController.swift in Sources */,
+				E61641D31F2A9DCF0013849E /* UserPoolsSignUpConfirmationViewController.swift in Sources */,
 				E6194CAB1EFEB679004764D5 /* SystemsModel.swift in Sources */,
 				E61972881EFD5AAA008F1F43 /* StatSheetController.swift in Sources */,
+				E634F47B1F33678D00062E68 /* ProfileJSON.swift in Sources */,
 				E61972761EFD5712008F1F43 /* ConnectController.swift in Sources */,
 				E6194CA71EFEB5EB004764D5 /* ConnectModel.swift in Sources */,
 				E61972741EFD55C6008F1F43 /* ProfileController.swift in Sources */,
 				E619725B1EFD52C6008F1F43 /* ViewController.swift in Sources */,
+				E61AB02F1F2AC00A001BF86E /* UpdatePassword.swift in Sources */,
+				E61641CF1F2A9AEA0013849E /* FormTableDelegate.swift in Sources */,
+				E61AB02B1F2AA847001BF86E /* TableInputCell.swift in Sources */,
 				E619726C1EFD534D008F1F43 /* SigninController.swift in Sources */,
 				E6194CB31EFEB781004764D5 /* EngagementsModel.swift in Sources */,
 				E619727E1EFD5871008F1F43 /* EditProfileController.swift in Sources */,
 				E6194CB71EFEB805004764D5 /* SearchModel.swift in Sources */,
 				E6DD47E01EFEB106003079C4 /* ProfileModel.swift in Sources */,
 				E61972591EFD52C6008F1F43 /* AppDelegate.swift in Sources */,
+				E68DE2A71F0EF66B00B55962 /* CalendarJSON.swift in Sources */,
 				E61972961EFD5DB7008F1F43 /* PaymentCompleteController.swift in Sources */,
+				E61641CD1F2A9A9D0013849E /* FormTableCell.swift in Sources */,
 				E619727C1EFD5807008F1F43 /* CameraController.swift in Sources */,
 				E61972701EFD5445008F1F43 /* ForgotController.swift in Sources */,
 				E61972841EFD59B8008F1F43 /* LikesController.swift in Sources */,
@@ -723,10 +1158,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 572R6985EK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/extras",
+					"$(PROJECT_DIR)/Sdk/Aws",
+					"$(PROJECT_DIR)/Sdk/Aws/extras",
+				);
 				INFOPLIST_FILE = Glory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glory.js;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Glory/Bridging_Header.h;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -738,10 +1183,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 572R6985EK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Google",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/AmazonAws",
+					"$(PROJECT_DIR)Up-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp/Sdk/Aws/extras",
+					"$(PROJECT_DIR)/Sdk/Aws",
+					"$(PROJECT_DIR)/Sdk/Aws/extras",
+				);
 				INFOPLIST_FILE = Glory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.glory.js;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Glory/Bridging_Header.h;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};

@@ -1,0 +1,28 @@
+[{
+  "postId": 1,
+  "postsInfo":[{
+    "userId": 11,
+    "photo": "img/3.jpg",
+    "created": 12234,
+    "description": "This is a posts.",
+    "isVisible": true
+  }]
+},{
+  "postId": 2,
+  "postsInfo":[{
+    "userId": 12,
+    "photo": "img/3.jpg",
+    "created": 12234,
+    "description": "This is a posts.",
+    "isVisible": true
+  }]
+},{
+  "postId": 3,
+  "postsInfo":[{
+    "userId": 11,
+    "photo": "img/3.jpg",
+    "created": 12234,
+    "description": "This is a posts.",
+    "isVisible": true
+    }]
+}]

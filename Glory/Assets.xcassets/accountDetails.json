@@ -1,0 +1,19 @@
+[{
+  "userId": 123,
+  "userDetails": [{
+      "email": "foo@foo.com",
+      "userBio": "This is an example."
+    }]
+  },{
+    "userId": 124,
+    "userDetails": [{
+        "email": "foo@foo.com",
+        "userBio": "This is an example."
+      }]
+  },{
+    "userId": 125,
+    "userDetails": [{
+        "email": "foo@foo.com",
+        "userBio": "This is an example."
+      }]
+}]

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC1FA4B37DCD6C4881062CD4F8E36E15"
+               BlueprintIdentifier = "4459E80A7C135DB7869FB36E0482A1DF"
                BuildableName = "AWSLex.framework"
                BlueprintName = "AWSLex"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC1FA4B37DCD6C4881062CD4F8E36E15"
+            BlueprintIdentifier = "4459E80A7C135DB7869FB36E0482A1DF"
             BuildableName = "AWSLex.framework"
             BlueprintName = "AWSLex"
             ReferencedContainer = "container:Pods.xcodeproj">

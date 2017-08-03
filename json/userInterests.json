@@ -1,0 +1,30 @@
+[{
+  "userId": 1,
+  "interests": [{
+    "interestsId": 23,
+    "interestsName": "Baseball",
+    "isSelected": true
+  },{
+    "interestsId": 24,
+    "interestsName": "Basketball",
+    "isSelected": true
+    },{
+      "interestsId": 25,
+      "interestsName": "Football",
+      "isSelected": true
+  }]
+},{
+  "userId": 2,
+  "interests": [{
+    "interestsId": 24,
+    "interestsName": "Baseball",
+    "isSelected": true
+  }]
+},{
+  "userId": 3,
+  "interests": [{
+    "interestsId": 24,
+    "interestsName": "Baseball",
+    "isSelected": true
+  }]
+}]

@@ -49,7 +49,7 @@ class InterestsModel {
         ]
         
         let functionName = "lambda-functions-dev-accounts"
-        lambda.sendFunction(functionName: functionName, jsonObject: createUserSelected)
+        lambda.sendFunction(functionName: functionName, jsonObject: updateUserSelected)
     }
     
     

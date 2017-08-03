@@ -1,0 +1,10 @@
+{
+    "eventId": 5,
+    "eventDetails": [{
+      "reminder": "Every 5 Mins",
+      "startTime": "3",
+      "endTime": "6",
+      "allDay": false,
+      "isVisible": true
+    }]
+  }

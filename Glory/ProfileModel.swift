@@ -151,12 +151,6 @@ class ProfileModel {
     func addFriend (userId : String, addedId : String, addedUsername : String, addedPhoto : UIImage, isAdded : Bool) {
         let addedUser : [String : Any] = [
             "userId" : userId,
-            "added" : [
-                addedId: ["addedUsername" : addedUsername,
-                          "addedPhoto" : addedPhoto,
-                          "isAdded" : isAdded
-                ]
-            ]
         ]
         
         let functionName = "lambda-functions-dev-accounts"

@@ -1,0 +1,25 @@
+[{
+  "userId": 123,
+  "account" : [{
+       "userName": "foo",
+       "fullName": "foo",
+       "userPhoto" : "photo.jpg",
+       "isLeader": true
+     }]
+  },{
+    "userId": 124,
+    "account" : [{
+         "userName": "foo",
+         "fullName": "foo",
+         "userPhoto" : "photo.jpg",
+         "isLeader": true
+       }]
+  },{
+    "userId": 125,
+    "account" : [{
+         "userName": "foo",
+         "fullName": "foo",
+         "userPhoto" : "photo.jpg",
+         "isLeader": true
+       }]
+  }]

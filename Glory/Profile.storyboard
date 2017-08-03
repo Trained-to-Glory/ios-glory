@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQ3-Tj-uQN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQ3-Tj-uQN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +23,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-nF-JBe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="218"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the users bio." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-fY-uey">
-                                <rect key="frame" x="109" y="323" width="157" height="21"/>
+                                <rect key="frame" x="109" y="323.5" width="157" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5i-k3-kuD">
-                                <rect key="frame" x="148" y="359" width="79" height="30"/>
-                                <state key="normal" title="MESSAGES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-ip-PRM">
+                                <rect key="frame" x="112" y="358" width="112" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5i-k3-kuD">
+                                        <rect key="frame" x="16" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="MESSAGES"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8X-qR-5MJ">
+                                        <rect key="frame" x="0.0" y="40" width="112" height="30"/>
+                                        <state key="normal" title="NOTIFICATIONS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFK-jh-kSD">
+                                        <rect key="frame" x="41" y="80" width="30" height="30"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <segue destination="wMg-A6-ywR" kind="show" identifier="toEditProfile" id="2E5-QT-gEN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="p8X-qR-5MJ" firstAttribute="leading" secondItem="HBg-ip-PRM" secondAttribute="leading" id="NUe-sA-oZs"/>
+                                    <constraint firstItem="wFK-jh-kSD" firstAttribute="leading" secondItem="HBg-ip-PRM" secondAttribute="leading" constant="41" id="aPl-en-doh"/>
+                                    <constraint firstItem="r5i-k3-kuD" firstAttribute="leading" secondItem="HBg-ip-PRM" secondAttribute="leading" constant="16" id="egx-yM-r2H"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-jT-p1y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="activateCamera:" destination="v3Q-ON-8hH" eventType="touchUpInside" id="cHf-Th-5el"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,51 +69,37 @@
                             <constraint firstItem="Oyd-Gh-pLS" firstAttribute="top" secondItem="Vd4-nF-JBe" secondAttribute="bottom" constant="336" id="BQD-Lg-aBE"/>
                             <constraint firstItem="Vd4-nF-JBe" firstAttribute="leading" secondItem="xnp-dp-LJX" secondAttribute="leading" id="Ihh-Jo-vnf"/>
                             <constraint firstItem="Vd4-nF-JBe" firstAttribute="leading" secondItem="xnp-dp-LJX" secondAttribute="leading" id="XHi-y3-wSa"/>
+                            <constraint firstItem="HBg-ip-PRM" firstAttribute="leading" secondItem="xnp-dp-LJX" secondAttribute="leadingMargin" constant="96" id="Xjk-es-pcp"/>
                             <constraint firstAttribute="trailing" secondItem="Vd4-nF-JBe" secondAttribute="trailing" id="ZY4-XM-X6o"/>
                             <constraint firstItem="Vd4-nF-JBe" firstAttribute="top" secondItem="ALB-ta-Qyg" secondAttribute="bottom" id="bIg-bm-SDQ"/>
+                            <constraint firstItem="HBg-ip-PRM" firstAttribute="top" secondItem="gkC-fY-uey" secondAttribute="bottom" constant="14" id="cQt-uM-2Xg"/>
                             <constraint firstItem="Vd4-nF-JBe" firstAttribute="top" secondItem="ALB-ta-Qyg" secondAttribute="bottom" id="fhh-s7-jBU"/>
-                            <constraint firstItem="r5i-k3-kuD" firstAttribute="top" secondItem="gkC-fY-uey" secondAttribute="bottom" constant="15" id="lf0-bJ-u42"/>
                             <constraint firstItem="gkC-fY-uey" firstAttribute="centerY" secondItem="xnp-dp-LJX" secondAttribute="centerY" id="mql-lD-GJT"/>
-                            <constraint firstAttribute="trailing" secondItem="r5i-k3-kuD" secondAttribute="trailing" constant="148" id="qS0-fE-9yc"/>
                             <constraint firstAttribute="trailing" secondItem="Vd4-nF-JBe" secondAttribute="trailing" id="sQz-oa-nDJ"/>
                             <constraint firstItem="gkC-fY-uey" firstAttribute="centerX" secondItem="xnp-dp-LJX" secondAttribute="centerX" id="wop-bF-zs1"/>
-                            <constraint firstItem="r5i-k3-kuD" firstAttribute="leading" secondItem="xnp-dp-LJX" secondAttribute="leading" constant="148" id="zm0-Ar-1i1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jNL-DW-s3D">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="j1T-5z-Fbw">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="niZ-M6-Xhb">
-                                <rect key="frame" x="16" y="7" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="EDIT"/>
-                            </button>
-                        </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p8X-qR-5MJ">
-                            <rect key="frame" x="132" y="7" width="111" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="NOTIFICATIONS"/>
-                        </button>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="bca-xu-bwh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2cD-y1-0cN">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SETTINGS"/>
-                            </button>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Profile" id="Upf-cw-qRr">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="98c-Qt-Sga">
+                            <connections>
+                                <segue destination="VlI-EA-st9" kind="show" identifier="toSettings" id="9ov-IJ-gvR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="wMg-A6-ywR" kind="show" identifier="toEditProfile" action="showDetailViewController:sender:" id="8Sm-pO-Z0w"/>
-                        <segue destination="VlI-EA-st9" kind="showDetail" identifier="toSettings" action="showViewController:sender:" id="XsM-c1-mfH"/>
+                        <outlet property="profilePicture" destination="Vd4-nF-JBe" id="nho-Fo-jiI"/>
+                        <outlet property="userBio" destination="gkC-fY-uey" id="8Wp-Xk-tcr"/>
                         <segue destination="pfa-cA-ooa" kind="showDetail" identifier="toNotification" id="M9e-Ex-iQ5"/>
                         <segue destination="C3e-TF-VGP" kind="showDetail" identifier="toMessages" id="sGx-Dm-Wp9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIx-u2-Aly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806.5" y="-568.5"/>
+            <point key="canvasLocation" x="2805.5999999999999" y="-568.9655172413793"/>
         </scene>
-        <!--Edit Profile Controller-->
+        <!--Edit-->
         <scene sceneID="1Bf-ge-lWh">
             <objects>
                 <viewController id="wMg-A6-ywR" customClass="EditProfileController" customModule="Glory" customModuleProvider="target" sceneMemberID="viewController">
@@ -114,6 +129,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="fullNameChanged:" destination="wMg-A6-ywR" eventType="editingChanged" id="gCB-ke-Ygj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-tw-EQW">
                                 <rect key="frame" x="16" y="323" width="343" height="21"/>
@@ -126,6 +144,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userNameChanged:" destination="wMg-A6-ywR" eventType="editingChanged" id="NP0-w9-hDO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZy-hT-8Pi">
                                 <rect key="frame" x="16" y="476" width="333" height="21"/>
@@ -144,6 +165,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userBioChanged:" destination="wMg-A6-ywR" eventType="editingChanged" id="ixI-kM-BU9"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-nC-rNf">
                                 <rect key="frame" x="16" y="505" width="333" height="17"/>
@@ -220,8 +244,23 @@
                             <constraint firstItem="w0B-N4-ARD" firstAttribute="top" secondItem="cD9-Yb-pgn" secondAttribute="bottom" constant="10" id="zLh-Nz-VCF"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Edit" id="MKJ-Pf-m42">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ouu-Ii-cNf">
+                            <connections>
+                                <action selector="saveChanges:" destination="wMg-A6-ywR" id="Hza-Lg-yqe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="750"/>
+                    <connections>
+                        <outlet property="fullName" destination="4yR-fg-pI3" id="pt1-6m-XgB"/>
+                        <outlet property="profilePicture" destination="w0B-N4-ARD" id="QRf-MH-6Cj"/>
+                        <outlet property="userBio" destination="dX9-2h-90s" id="yT7-7z-upf"/>
+                        <outlet property="userName" destination="aQK-gg-08Z" id="jkH-qa-lQV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcC-BE-YnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

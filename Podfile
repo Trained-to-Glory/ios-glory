@@ -25,4 +25,6 @@ target :'Glory' do
     pod 'AWSSimpleDB'
     pod 'AWSSNS'
     pod 'AWSSQS'
+    pod 'AFNetworking'
+    pod 'Stripe'
 end

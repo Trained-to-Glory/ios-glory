@@ -1,49 +1,66 @@
 PODS:
-  - AWSAutoScaling (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSCloudWatch (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSCognito (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSCognitoIdentityProvider (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSCore (2.5.8)
-  - AWSDynamoDB (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSEC2 (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSElasticLoadBalancing (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSIoT (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSKinesis (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSLambda (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSLex (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSMachineLearning (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSMobileAnalytics (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSPinpoint (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSPolly (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSRekognition (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSS3 (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSSES (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSSimpleDB (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSSNS (2.5.8):
-    - AWSCore (= 2.5.8)
-  - AWSSQS (2.5.8):
-    - AWSCore (= 2.5.8)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AWSAutoScaling (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSCloudWatch (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSCognito (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSCognitoIdentityProvider (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSCore (2.5.9)
+  - AWSDynamoDB (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSEC2 (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSElasticLoadBalancing (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSIoT (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSKinesis (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSLambda (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSLex (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSMachineLearning (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSMobileAnalytics (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSPinpoint (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSPolly (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSRekognition (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSS3 (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSSES (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSSimpleDB (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSSNS (2.5.9):
+    - AWSCore (= 2.5.9)
+  - AWSSQS (2.5.9):
+    - AWSCore (= 2.5.9)
+  - Stripe (11.2.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - AWSAutoScaling
   - AWSCloudWatch
   - AWSCognito
@@ -65,31 +82,34 @@ DEPENDENCIES:
   - AWSSimpleDB
   - AWSSNS
   - AWSSQS
+  - Stripe
 
 SPEC CHECKSUMS:
-  AWSAutoScaling: b0ca14740f9f26282d6ccd00a7b2f5a499506c28
-  AWSCloudWatch: 9813ebc6104bc61599b12fa448047c69d4a0115c
-  AWSCognito: 8eb74039f4dc5f2d929999c4f531eeb4bd83e6cb
-  AWSCognitoIdentityProvider: 6c0c276a16b622914563350c64d723bcecaa9e75
-  AWSCore: cf101c44d2cc5da32abc27d5529cddc63c010415
-  AWSDynamoDB: 53ead656801e1a40b415fc0bebd85f1dc0dc0ead
-  AWSEC2: d2817357186d4cc18c23ec0b9deb136bfea88b3a
-  AWSElasticLoadBalancing: 9fd9f162b87bded22a5d0406173d8b128eabc379
-  AWSIoT: 209ae36ea1e48a9b8bcb65a94e8267265b4ff2b3
-  AWSKinesis: d4badcaa538424fad79aa86bc35626aa0b7019c9
-  AWSLambda: d83a31bca72ce8e6a6b81a5a3a03e7ea2a44ec3d
-  AWSLex: d8b18608c1076be34034e52f69052a16acce9172
-  AWSMachineLearning: bc8860ad5c2651616f6482e7d70842ba89eaf7a8
-  AWSMobileAnalytics: d0eefb1dbcab87cb97f78961bb847f61396380bb
-  AWSPinpoint: 30b5ef18bfa3a95558d14c85c4fa0457dc8667d3
-  AWSPolly: ca97cf9a0b900a5bb4ca6b9bd297daf851540d48
-  AWSRekognition: 85d53a2ed7d6a11d710b16fbc95e4670f7af19ce
-  AWSS3: addf558f9cf2368e7fb520440867fea5596db0fb
-  AWSSES: 4b81522e24a8e4095d8d6c0511397ab1d51fc06f
-  AWSSimpleDB: d25964f8ec8e5d20af3755667fe0c2924e28925c
-  AWSSNS: 812baa3f5dd5e53da69c37fb8b451e52d0735821
-  AWSSQS: bea4c7b93c011c7765a071b01ad74949d62c1d76
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AWSAutoScaling: f55b3218db16a90a8065597cf23f1003c31d9fa4
+  AWSCloudWatch: f453baacca1fda963326f5e5208cefaeb8cb8820
+  AWSCognito: 5dfe4120e7f77b2e77396b4532e4aacacc4ae08d
+  AWSCognitoIdentityProvider: 4655e97cfbb4347591db74b33e8c89309ca25131
+  AWSCore: c71840dd51f271dc0af8de8fd6f352767ebde8b4
+  AWSDynamoDB: 5817c47852d1548645d9eb23f809d57d763975f9
+  AWSEC2: 0e7021d093914ca0d421e8829cf262975467f791
+  AWSElasticLoadBalancing: 998618407dd3108ee84c087ebd401fb4418f5006
+  AWSIoT: c10cee06f05eab49aa429d332cb5ba5ddbaf7d65
+  AWSKinesis: 55631b3f235d363afbe172a08862f13ce3f9b929
+  AWSLambda: 6f0b58a4258b643382a3d9170686768cf90ba56a
+  AWSLex: fb29e16c3f4b2c3dab261983d80d24701ac94a40
+  AWSMachineLearning: 5042a87766b76188594e7ccbabdf676c8785ce65
+  AWSMobileAnalytics: cd23e8c06cc58c42e3326512ce682abbff3345c2
+  AWSPinpoint: 2ab08b9eaeb77e3cb2d134908bd5706cff465d4f
+  AWSPolly: a2b4010bf729441daf3cf877d9813087bc0f2433
+  AWSRekognition: 3d3e9e0b69c75fd33eda36fa6c9d9e317e69eb4d
+  AWSS3: c36b91edb50ccd676be4a92836bb72f0c2ac312b
+  AWSSES: 1125079ce6b943a094c92f00a7e8406672da0ac2
+  AWSSimpleDB: b4634cb259b106aa73f63435c6991428fea461f1
+  AWSSNS: 158640bc69947f179eff6ac96a9ab9d4893675c1
+  AWSSQS: eaec6df70bd4112d88b8fae0d8c5987b1fd471a3
+  Stripe: 898f83a95d72180c6eb4acd65b2ae6158fc6a8bd
 
-PODFILE CHECKSUM: 6ecae00ff7f1177f931775dfd31c0a8ac3564619
+PODFILE CHECKSUM: 6225d2dcc46ae1338d2c2d039d614c1a397094d5
 
 COCOAPODS: 1.3.0.beta.1

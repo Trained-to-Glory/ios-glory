@@ -8,6 +8,7 @@
 
 import UIKit
 import AWSCore
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:eda0e1f6-58cc-40c8-afb3-347abf632a4e")
         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        // Stripe Configuration
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_86ybhlRNQgVLyNlBjTp33Rqp"
         return true
     }
 
