@@ -29,7 +29,6 @@
 		E61972631EFD52C6008F1F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61972611EFD52C6008F1F43 /* LaunchScreen.storyboard */; };
 		E619726C1EFD534D008F1F43 /* SigninController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619726B1EFD534D008F1F43 /* SigninController.swift */; };
 		E619726E1EFD53F0008F1F43 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619726D1EFD53F0008F1F43 /* SignupController.swift */; };
-		E61972701EFD5445008F1F43 /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619726F1EFD5445008F1F43 /* ForgotController.swift */; };
 		E61972721EFD54AD008F1F43 /* InterestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61972711EFD54AD008F1F43 /* InterestsController.swift */; };
 		E61972741EFD55C6008F1F43 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61972731EFD55C6008F1F43 /* ProfileController.swift */; };
 		E61972761EFD5712008F1F43 /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61972751EFD5712008F1F43 /* ConnectController.swift */; };
@@ -64,40 +63,13 @@
 		E61AB02B1F2AA847001BF86E /* TableInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02A1F2AA847001BF86E /* TableInputCell.swift */; };
 		E61AB02D1F2AB77E001BF86E /* SigninExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */; };
 		E61AB02F1F2AC00A001BF86E /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */; };
-		E634F46C1F3295D900062E68 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F45E1F3295D400062E68 /* accounts.json */; };
-		E634F46D1F3295D900062E68 /* calendarDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F45F1F3295D400062E68 /* calendarDetails.json */; };
-		E634F46E1F3295D900062E68 /* engagements.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4601F3295D500062E68 /* engagements.json */; };
-		E634F46F1F3295D900062E68 /* accountDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4611F3295D500062E68 /* accountDetails.json */; };
-		E634F4701F3295D900062E68 /* pursuitDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4621F3295D500062E68 /* pursuitDetails.json */; };
-		E634F4711F3295D900062E68 /* forms.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4631F3295D600062E68 /* forms.json */; };
-		E634F4721F3295D900062E68 /* formDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4641F3295D600062E68 /* formDetails.json */; };
-		E634F4731F3295D900062E68 /* pursuit.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4651F3295D700062E68 /* pursuit.json */; };
-		E634F4741F3295D900062E68 /* accountAdded.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4661F3295D700062E68 /* accountAdded.json */; };
-		E634F4751F3295D900062E68 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4671F3295D700062E68 /* posts.json */; };
-		E634F4761F3295D900062E68 /* interests.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4681F3295D700062E68 /* interests.json */; };
-		E634F4771F3295D900062E68 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F4691F3295D800062E68 /* calendar.json */; };
-		E634F4781F3295D900062E68 /* userInterests.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F46A1F3295D800062E68 /* userInterests.json */; };
-		E634F4791F3295D900062E68 /* pursuitSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = E634F46B1F3295D900062E68 /* pursuitSteps.json */; };
 		E634F47B1F33678D00062E68 /* ProfileJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47A1F33678D00062E68 /* ProfileJSON.swift */; };
 		E634F47D1F33695700062E68 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47C1F33695700062E68 /* PostJSON.swift */; };
 		E634F47F1F33699B00062E68 /* InterestsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47E1F33699B00062E68 /* InterestsJSON.swift */; };
 		E634F4811F3369EE00062E68 /* PursuitJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F4801F3369EE00062E68 /* PursuitJSON.swift */; };
 		E63A7E7D1F0EAFAF00AD6A98 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */; };
 		E68DE2A71F0EF66B00B55962 /* CalendarJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */; };
-		E6904F331F33803500F2EEEB /* accountAdded.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F251F33803500F2EEEB /* accountAdded.json */; };
-		E6904F341F33803500F2EEEB /* accountDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F261F33803500F2EEEB /* accountDetails.json */; };
-		E6904F351F33803500F2EEEB /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F271F33803500F2EEEB /* accounts.json */; };
-		E6904F361F33803500F2EEEB /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F281F33803500F2EEEB /* calendar.json */; };
-		E6904F371F33803500F2EEEB /* calendarDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F291F33803500F2EEEB /* calendarDetails.json */; };
-		E6904F381F33803500F2EEEB /* engagements.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2A1F33803500F2EEEB /* engagements.json */; };
-		E6904F391F33803500F2EEEB /* formDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2B1F33803500F2EEEB /* formDetails.json */; };
-		E6904F3A1F33803600F2EEEB /* forms.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2C1F33803500F2EEEB /* forms.json */; };
-		E6904F3B1F33803600F2EEEB /* interests.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2D1F33803500F2EEEB /* interests.json */; };
-		E6904F3C1F33803600F2EEEB /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2E1F33803500F2EEEB /* posts.json */; };
-		E6904F3D1F33803600F2EEEB /* pursuit.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F2F1F33803500F2EEEB /* pursuit.json */; };
-		E6904F3E1F33803600F2EEEB /* pursuitDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F301F33803500F2EEEB /* pursuitDetails.json */; };
-		E6904F3F1F33803600F2EEEB /* pursuitSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F311F33803500F2EEEB /* pursuitSteps.json */; };
-		E6904F401F33803600F2EEEB /* userInterests.json in Resources */ = {isa = PBXBuildFile; fileRef = E6904F321F33803500F2EEEB /* userInterests.json */; };
+		E6904F621F33BFFE00F2EEEB /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6904F611F33BFFE00F2EEEB /* ForgotController.swift */; };
 		E6BE5C491F2B9AF100CEB872 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */; };
 		E6BE5C4A1F2B9AF100CEB872 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6BE5C4B1F2B9AF800CEB872 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */; };
@@ -202,7 +174,6 @@
 		E61972641EFD52C6008F1F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E619726B1EFD534D008F1F43 /* SigninController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninController.swift; sourceTree = "<group>"; };
 		E619726D1EFD53F0008F1F43 /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
-		E619726F1EFD5445008F1F43 /* ForgotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotController.swift; path = ../../../Downloads/ForgotController.swift; sourceTree = "<group>"; };
 		E61972711EFD54AD008F1F43 /* InterestsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsController.swift; sourceTree = "<group>"; };
 		E61972731EFD55C6008F1F43 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		E61972751EFD5712008F1F43 /* ConnectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectController.swift; sourceTree = "<group>"; };
@@ -237,40 +208,27 @@
 		E61AB02A1F2AA847001BF86E /* TableInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInputCell.swift; sourceTree = "<group>"; };
 		E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninExtension.swift; sourceTree = "<group>"; };
 		E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
-		E634F45E1F3295D400062E68 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accounts.json; path = "../../../Lambda-Functions/serverless-crud/json/accounts.json"; sourceTree = "<group>"; };
-		E634F45F1F3295D400062E68 /* calendarDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = calendarDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/calendarDetails.json"; sourceTree = "<group>"; };
-		E634F4601F3295D500062E68 /* engagements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = engagements.json; path = "../../../Lambda-Functions/serverless-crud/json/engagements.json"; sourceTree = "<group>"; };
-		E634F4611F3295D500062E68 /* accountDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accountDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/accountDetails.json"; sourceTree = "<group>"; };
-		E634F4621F3295D500062E68 /* pursuitDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuitDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuitDetails.json"; sourceTree = "<group>"; };
-		E634F4631F3295D600062E68 /* forms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = forms.json; path = "../../../Lambda-Functions/serverless-crud/json/forms.json"; sourceTree = "<group>"; };
-		E634F4641F3295D600062E68 /* formDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = formDetails.json; path = "../../../Lambda-Functions/serverless-crud/json/formDetails.json"; sourceTree = "<group>"; };
-		E634F4651F3295D700062E68 /* pursuit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuit.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuit.json"; sourceTree = "<group>"; };
-		E634F4661F3295D700062E68 /* accountAdded.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = accountAdded.json; path = "../../../Lambda-Functions/serverless-crud/json/accountAdded.json"; sourceTree = "<group>"; };
-		E634F4671F3295D700062E68 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = posts.json; path = "../../../Lambda-Functions/serverless-crud/json/posts.json"; sourceTree = "<group>"; };
-		E634F4681F3295D700062E68 /* interests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = interests.json; path = "../../../Lambda-Functions/serverless-crud/json/interests.json"; sourceTree = "<group>"; };
-		E634F4691F3295D800062E68 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = calendar.json; path = "../../../Lambda-Functions/serverless-crud/json/calendar.json"; sourceTree = "<group>"; };
-		E634F46A1F3295D800062E68 /* userInterests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = userInterests.json; path = "../../../Lambda-Functions/serverless-crud/json/userInterests.json"; sourceTree = "<group>"; };
-		E634F46B1F3295D900062E68 /* pursuitSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pursuitSteps.json; path = "../../../Lambda-Functions/serverless-crud/json/pursuitSteps.json"; sourceTree = "<group>"; };
 		E634F47A1F33678D00062E68 /* ProfileJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJSON.swift; sourceTree = "<group>"; };
 		E634F47C1F33695700062E68 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		E634F47E1F33699B00062E68 /* InterestsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsJSON.swift; sourceTree = "<group>"; };
 		E634F4801F3369EE00062E68 /* PursuitJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursuitJSON.swift; sourceTree = "<group>"; };
 		E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
 		E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSON.swift; sourceTree = "<group>"; };
-		E6904F251F33803500F2EEEB /* accountAdded.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accountAdded.json; sourceTree = "<group>"; };
-		E6904F261F33803500F2EEEB /* accountDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accountDetails.json; sourceTree = "<group>"; };
-		E6904F271F33803500F2EEEB /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
-		E6904F281F33803500F2EEEB /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
-		E6904F291F33803500F2EEEB /* calendarDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendarDetails.json; sourceTree = "<group>"; };
-		E6904F2A1F33803500F2EEEB /* engagements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = engagements.json; sourceTree = "<group>"; };
-		E6904F2B1F33803500F2EEEB /* formDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = formDetails.json; sourceTree = "<group>"; };
-		E6904F2C1F33803500F2EEEB /* forms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forms.json; sourceTree = "<group>"; };
-		E6904F2D1F33803500F2EEEB /* interests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = interests.json; sourceTree = "<group>"; };
-		E6904F2E1F33803500F2EEEB /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
-		E6904F2F1F33803500F2EEEB /* pursuit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuit.json; sourceTree = "<group>"; };
-		E6904F301F33803500F2EEEB /* pursuitDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuitDetails.json; sourceTree = "<group>"; };
-		E6904F311F33803500F2EEEB /* pursuitSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuitSteps.json; sourceTree = "<group>"; };
-		E6904F321F33803500F2EEEB /* userInterests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userInterests.json; sourceTree = "<group>"; };
+		E6904F531F33BF8700F2EEEB /* accountAdded.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = accountAdded.json; sourceTree = "<group>"; };
+		E6904F541F33BF8700F2EEEB /* accountDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = accountDetails.json; sourceTree = "<group>"; };
+		E6904F551F33BF8700F2EEEB /* accounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
+		E6904F561F33BF8700F2EEEB /* calendar.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
+		E6904F571F33BF8700F2EEEB /* calendarDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = calendarDetails.json; sourceTree = "<group>"; };
+		E6904F581F33BF8700F2EEEB /* engagements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = engagements.json; sourceTree = "<group>"; };
+		E6904F591F33BF8700F2EEEB /* formDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = formDetails.json; sourceTree = "<group>"; };
+		E6904F5A1F33BF8700F2EEEB /* forms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forms.json; sourceTree = "<group>"; };
+		E6904F5B1F33BF8700F2EEEB /* interests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interests.json; sourceTree = "<group>"; };
+		E6904F5C1F33BF8700F2EEEB /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		E6904F5D1F33BF8700F2EEEB /* pursuit.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pursuit.json; sourceTree = "<group>"; };
+		E6904F5E1F33BF8700F2EEEB /* pursuitDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pursuitDetails.json; sourceTree = "<group>"; };
+		E6904F5F1F33BF8700F2EEEB /* pursuitSteps.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pursuitSteps.json; sourceTree = "<group>"; };
+		E6904F601F33BF8700F2EEEB /* userInterests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userInterests.json; sourceTree = "<group>"; };
+		E6904F611F33BFFE00F2EEEB /* ForgotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotController.swift; sourceTree = "<group>"; };
 		E6BE5C441F2B9AE700CEB872 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = Sdk/Aws/AWSDynamoDB.framework; sourceTree = "<group>"; };
 		E6BE5C451F2B9AE800CEB872 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAPIGateway.framework; path = Sdk/Aws/AWSAPIGateway.framework; sourceTree = "<group>"; };
 		E6BE5C461F2B9AE800CEB872 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Sdk/Aws/AWSCore.framework; sourceTree = "<group>"; };
@@ -562,8 +520,7 @@
 		E61972571EFD52C6008F1F43 /* Glory */ = {
 			isa = PBXGroup;
 			children = (
-				E6904F241F33803500F2EEEB /* json */,
-				E634F44C1F32913400062E68 /* JSON */,
+				E6904F521F33BF8700F2EEEB /* JSON */,
 				E61641D41F2A9FFF0013849E /* AmazonAws */,
 				E634F4821F336A3E00062E68 /* Test-Models */,
 				E61972A31EFD6043008F1F43 /* Models */,
@@ -604,9 +561,9 @@
 			children = (
 				E619726B1EFD534D008F1F43 /* SigninController.swift */,
 				E619726D1EFD53F0008F1F43 /* SignupController.swift */,
-				E619726F1EFD5445008F1F43 /* ForgotController.swift */,
 				E61AB02C1F2AB77E001BF86E /* SigninExtension.swift */,
 				E61AB02E1F2AC00A001BF86E /* UpdatePassword.swift */,
+				E6904F611F33BFFE00F2EEEB /* ForgotController.swift */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -727,27 +684,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		E634F44C1F32913400062E68 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				E634F4661F3295D700062E68 /* accountAdded.json */,
-				E634F4611F3295D500062E68 /* accountDetails.json */,
-				E634F45E1F3295D400062E68 /* accounts.json */,
-				E634F4691F3295D800062E68 /* calendar.json */,
-				E634F45F1F3295D400062E68 /* calendarDetails.json */,
-				E634F4601F3295D500062E68 /* engagements.json */,
-				E634F4641F3295D600062E68 /* formDetails.json */,
-				E634F4631F3295D600062E68 /* forms.json */,
-				E634F4681F3295D700062E68 /* interests.json */,
-				E634F4671F3295D700062E68 /* posts.json */,
-				E634F4651F3295D700062E68 /* pursuit.json */,
-				E634F4621F3295D500062E68 /* pursuitDetails.json */,
-				E634F46B1F3295D900062E68 /* pursuitSteps.json */,
-				E634F46A1F3295D800062E68 /* userInterests.json */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		E634F4821F336A3E00062E68 /* Test-Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,26 +696,25 @@
 			path = "Test-Models";
 			sourceTree = "<group>";
 		};
-		E6904F241F33803500F2EEEB /* json */ = {
+		E6904F521F33BF8700F2EEEB /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				E6904F251F33803500F2EEEB /* accountAdded.json */,
-				E6904F261F33803500F2EEEB /* accountDetails.json */,
-				E6904F271F33803500F2EEEB /* accounts.json */,
-				E6904F281F33803500F2EEEB /* calendar.json */,
-				E6904F291F33803500F2EEEB /* calendarDetails.json */,
-				E6904F2A1F33803500F2EEEB /* engagements.json */,
-				E6904F2B1F33803500F2EEEB /* formDetails.json */,
-				E6904F2C1F33803500F2EEEB /* forms.json */,
-				E6904F2D1F33803500F2EEEB /* interests.json */,
-				E6904F2E1F33803500F2EEEB /* posts.json */,
-				E6904F2F1F33803500F2EEEB /* pursuit.json */,
-				E6904F301F33803500F2EEEB /* pursuitDetails.json */,
-				E6904F311F33803500F2EEEB /* pursuitSteps.json */,
-				E6904F321F33803500F2EEEB /* userInterests.json */,
+				E6904F531F33BF8700F2EEEB /* accountAdded.json */,
+				E6904F541F33BF8700F2EEEB /* accountDetails.json */,
+				E6904F551F33BF8700F2EEEB /* accounts.json */,
+				E6904F561F33BF8700F2EEEB /* calendar.json */,
+				E6904F571F33BF8700F2EEEB /* calendarDetails.json */,
+				E6904F581F33BF8700F2EEEB /* engagements.json */,
+				E6904F591F33BF8700F2EEEB /* formDetails.json */,
+				E6904F5A1F33BF8700F2EEEB /* forms.json */,
+				E6904F5B1F33BF8700F2EEEB /* interests.json */,
+				E6904F5C1F33BF8700F2EEEB /* posts.json */,
+				E6904F5D1F33BF8700F2EEEB /* pursuit.json */,
+				E6904F5E1F33BF8700F2EEEB /* pursuitDetails.json */,
+				E6904F5F1F33BF8700F2EEEB /* pursuitSteps.json */,
+				E6904F601F33BF8700F2EEEB /* userInterests.json */,
 			);
-			name = json;
-			path = "../../Lambda-Functions/serverless-crud/json";
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -847,50 +782,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6904F3B1F33803600F2EEEB /* interests.json in Resources */,
 				E61972631EFD52C6008F1F43 /* LaunchScreen.storyboard in Resources */,
 				E6BE5C7B1F2B9E7200CEB872 /* GoogleSignIn.bundle in Resources */,
 				E6BE5C7C1F2B9E7200CEB872 /* AWSGoogleSignInResources.bundle in Resources */,
-				E634F4771F3295D900062E68 /* calendar.json in Resources */,
 				E61972B91EFDE23D008F1F43 /* Payment.storyboard in Resources */,
-				E634F4721F3295D900062E68 /* formDetails.json in Resources */,
 				E61972B71EFDE213008F1F43 /* Forms.storyboard in Resources */,
 				E61972B51EFDE152008F1F43 /* Camera.storyboard in Resources */,
 				E61972C41EFDE2DF008F1F43 /* Messages.storyboard in Resources */,
-				E634F4731F3295D900062E68 /* pursuit.json in Resources */,
-				E6904F3C1F33803600F2EEEB /* posts.json in Resources */,
 				E61972B01EFDE10D008F1F43 /* News.storyboard in Resources */,
 				E61972AD1EFDE0CF008F1F43 /* Connect.storyboard in Resources */,
-				E634F46C1F3295D900062E68 /* accounts.json in Resources */,
-				E634F4701F3295D900062E68 /* pursuitDetails.json in Resources */,
-				E6904F341F33803500F2EEEB /* accountDetails.json in Resources */,
-				E6904F371F33803500F2EEEB /* calendarDetails.json in Resources */,
-				E6904F401F33803600F2EEEB /* userInterests.json in Resources */,
-				E634F46F1F3295D900062E68 /* accountDetails.json in Resources */,
-				E6904F3F1F33803600F2EEEB /* pursuitSteps.json in Resources */,
 				E61972601EFD52C6008F1F43 /* Assets.xcassets in Resources */,
-				E634F4791F3295D900062E68 /* pursuitSteps.json in Resources */,
-				E6904F331F33803500F2EEEB /* accountAdded.json in Resources */,
-				E6904F361F33803500F2EEEB /* calendar.json in Resources */,
-				E634F4781F3295D900062E68 /* userInterests.json in Resources */,
 				E61972BC1EFDE253008F1F43 /* Search.storyboard in Resources */,
 				E61972A61EFDDFB4008F1F43 /* Profile.storyboard in Resources */,
-				E6904F391F33803500F2EEEB /* formDetails.json in Resources */,
-				E6904F3D1F33803600F2EEEB /* pursuit.json in Resources */,
 				E61972C01EFDE2B8008F1F43 /* Notifications.storyboard in Resources */,
-				E634F46E1F3295D900062E68 /* engagements.json in Resources */,
-				E6904F3A1F33803600F2EEEB /* forms.json in Resources */,
-				E6904F3E1F33803600F2EEEB /* pursuitDetails.json in Resources */,
-				E634F4711F3295D900062E68 /* forms.json in Resources */,
 				E619725E1EFD52C6008F1F43 /* Main.storyboard in Resources */,
-				E634F4761F3295D900062E68 /* interests.json in Resources */,
 				E61972C21EFDE2CB008F1F43 /* Settings.storyboard in Resources */,
-				E6904F381F33803500F2EEEB /* engagements.json in Resources */,
-				E634F46D1F3295D900062E68 /* calendarDetails.json in Resources */,
-				E634F4741F3295D900062E68 /* accountAdded.json in Resources */,
 				E61972B21EFDE12C008F1F43 /* Systems.storyboard in Resources */,
-				E6904F351F33803500F2EEEB /* accounts.json in Resources */,
-				E634F4751F3295D900062E68 /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +866,7 @@
 				E61641D11F2A9D860013849E /* UserPoolsUIHelper.swift in Sources */,
 				E6194CAD1EFEB6C7004764D5 /* InterestsModel.swift in Sources */,
 				E61972941EFD5D62008F1F43 /* PaymentController.swift in Sources */,
+				E6904F621F33BFFE00F2EEEB /* ForgotController.swift in Sources */,
 				E634F47F1F33699B00062E68 /* InterestsJSON.swift in Sources */,
 				E61AB02D1F2AB77E001BF86E /* SigninExtension.swift in Sources */,
 				E60E94D51F27F4EC003CDDEE /* ContactsController.swift in Sources */,
@@ -986,7 +894,6 @@
 				E61972961EFD5DB7008F1F43 /* PaymentCompleteController.swift in Sources */,
 				E61641CD1F2A9A9D0013849E /* FormTableCell.swift in Sources */,
 				E619727C1EFD5807008F1F43 /* CameraController.swift in Sources */,
-				E61972701EFD5445008F1F43 /* ForgotController.swift in Sources */,
 				E61972841EFD59B8008F1F43 /* LikesController.swift in Sources */,
 				E61972781EFD5758008F1F43 /* NewsController.swift in Sources */,
 				E61972821EFD596C008F1F43 /* NewsDetailController.swift in Sources */,

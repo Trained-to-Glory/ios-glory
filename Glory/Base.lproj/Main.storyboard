@@ -451,8 +451,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableFormView" destination="u9k-yJ-NKl" id="9np-nQ-4nh"/>
-                        <outlet property="tableView" destination="YpM-kC-sgV" id="R5y-o3-cP8"/>
+                        <outlet property="tableFormView" destination="u9k-yJ-NKl" id="CSb-DB-4mk"/>
+                        <outlet property="tableView" destination="YpM-kC-sgV" id="z7R-UO-aTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm6-cz-c62" userLabel="First Responder" sceneMemberID="firstResponder"/>

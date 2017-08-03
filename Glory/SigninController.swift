@@ -30,7 +30,6 @@ class SigninController: UIViewController {
         self.setUpUserPoolsUI()
         // set up background
         self.setUpBackground()
-        print(ProfileModel.readAccountJson())
     }
     
     func setUpUserPoolsUI() {
