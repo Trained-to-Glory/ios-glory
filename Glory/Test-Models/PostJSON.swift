@@ -3,62 +3,86 @@ import Foundation
 class PostJSON {
     
     var rawData: NSData! = nil
+    var postId : String?
+    var userId : String?
+    var photo : String?
+    var created : String?
+    var description : String?
+    var isVisible : String?
+    var totalLikes : String?
+    var totalComments : String?
+    var commentText : String?
 
+    init(postId: String, userId: String, photo: String, isVisible: String, created: String, description : String){
+        self.postId = postId
+        self.created = created
+        self.userId = userId
+        self.photo = photo
+        self.isVisible = isVisible
+        self.description = description
+    }
+    
+    init(postData: [String: AnyObject]){
+        self.postId = postData["postId"] as? String
+        self.userId = postData["userId"] as? String
+        self.photo = postData["photo"] as? String
+        self.created = postData["created"] as? String
+        self.description = postData["description"] as? String
+        self.isVisible = postData["isVisible"] as? String
+    }
+    
+    init(postEngagements: [String: AnyObject]){
+       self.totalLikes = postEngagements["totalLikes"] as? String
+       self.totalComments = postEngagements["totalComments"] as? String
+    }
+    
+    init(postComments: [String: AnyObject]){
+        self.commentText = postComments["commentText"] as? String
+    }
+    
     // MARK: - Read JSON Files
     
-    func readPostJson() {
+    static func readPostJson() -> [PostJSON]{
+        var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "posts", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "posts") as! NSArray
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["posts"] as! [[String : AnyObject]]
             for values in jsonArray {
-                let postId = (values as AnyObject)["postId"] as? String
-                let userId = (values as AnyObject)["userId"] as? String
-                let photo = (values as AnyObject)["photo"] as? String
-                let created = (values as AnyObject)["created"] as? String
-                let description = (values as AnyObject)["description"] as? String
-                let isVisible = (values as AnyObject)["isVisible"] as? String
+                let newPost = PostJSON(postData: values)
+                postModel.append(newPost)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return postModel
     }
     
-    func readPostEngagementsJson() {
+    static func readPostEngagementsJson() -> [PostJSON] {
+        var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "engagements", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "engagementCount") as! NSArray
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["engagementCount"] as! [[String : AnyObject]]
             for values in jsonArray {
-                let totalLikes = (values as AnyObject)["totalLikes"] as? String
-                let totalComments = (values as AnyObject)["totalComments"] as? String
+                let newPost = PostJSON(postEngagements: values)
+                postModel.append(newPost)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return postModel
     }
     
     
-    func readPostCommentsJson() {
+    static func readPostCommentsJson() -> [PostJSON] {
+        var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "engagements", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "comment") as! NSArray
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["comment"] as! [[String : AnyObject]]
             for values in jsonArray {
-                let commentText = (values as AnyObject)["commentText"] as? String
+                let newPost = PostJSON(postComments: values)
+                postModel.append(newPost)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return postModel
     }
     
     // MARK: - Write To JSON File
@@ -105,5 +129,21 @@ class PostJSON {
                 // Handle Error
                 print("Method Failed")
             }
+    }
+}
+
+extension PostJSON {
+    
+    static func parseJSONFromData(jsonData: NSData?) -> [String: AnyObject]? {
+        if let data = jsonData {
+            do {
+                let jsonDictionary = try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)
+                return jsonDictionary as! [String : AnyObject]
+                
+            } catch let error as NSError {
+                print("error processing: \(error.localizedDescription)")
+            }
+        }
+        return nil
     }
 }

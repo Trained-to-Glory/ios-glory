@@ -8,6 +8,12 @@ class ProfileJSON {
     var isLeader : String?
     var userId : String?
     var userPhoto : String?
+    var email : String?
+    var userBio : String?
+    var addedId : String?
+    var addedUserName : String?
+    var addedPhoto : String?
+    var isAdded : String?
     
     init(userName: String, userId: String, userPhoto: String, isLeader: String, fullName: String){
         self.userName = userName
@@ -27,6 +33,18 @@ class ProfileJSON {
         
     }
     
+    init(detailValues : [String: AnyObject]){
+        self.email = detailValues["email"] as? String
+        self.userBio = detailValues["userBio"] as? String
+    }
+    
+    init(addedValues : [String: AnyObject]){
+        self.addedId = addedValues["addedId"] as? String
+        self.addedUserName = addedValues["addedUserName"] as? String
+        self.addedPhoto = addedValues["addedPhoto"] as? String
+        self.isAdded = addedValues["isAdded"] as? String
+    }
+
     // MARK: - Read JSON Files
    static func readListOfAccounts() -> [ProfileJSON]{
     var profileModel = [ProfileJSON]()
@@ -42,59 +60,32 @@ class ProfileJSON {
     return profileModel
 }
     
-    func readSingleAccount() {
-        let file = Bundle.main.path(forResource: "accounts", ofType: "json")
-        let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "one-account") as! NSArray
-            for values in jsonArray {
-                let fullName = (values as AnyObject)["fullName"] as? String
-                let userName = (values as AnyObject)["userName"] as? String
-                let userId = (values as AnyObject)["userId"] as? String
-                let userPhoto = (values as AnyObject)["userPhoto"] as? String
-            }
-            
-        } catch {
-            print("error reading json")
-        }
-    }
-    
-    func readAccountDetailJson() {
+    static func readAccountDetailJson() -> [ProfileJSON] {
+        var profileModel = [ProfileJSON]()
         let file = Bundle.main.path(forResource: "accountDetails", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "userDetails") as! NSArray
-            for values in jsonArray {
-                let email = (values as AnyObject)["email"] as? String
-                let userBio = (values as AnyObject)["userBio"] as? String
+        if let jsonDictionary = ProfileJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["userDeatils"] as! [[String : AnyObject]]
+            for detailValues in jsonArray {
+                let newAccount = ProfileJSON(detailValues: detailValues)
+                profileModel.append(newAccount)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return profileModel
     }
 
-    func readAccountAddedJson() {
+    static func readAccountAddedJson() -> [ProfileJSON] {
+        var profileModel = [ProfileJSON]()
         let file = Bundle.main.path(forResource: "accountAdded", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "accountAdded") as! NSArray
-            for values in jsonArray {
-                let addedId = (values as AnyObject)["addedId"] as? String
-                let addedUserName = (values as AnyObject)["addedUserName"] as? String
-                let addedPhoto = (values as AnyObject)["addedPhoto"] as? String
-                let isAdded = (values as AnyObject)["isAdded"] as? String
+        if let jsonDictionary = ProfileJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["accountAdded"] as! [[String : AnyObject]]
+            for detailValues in jsonArray {
+                let newAccount = ProfileJSON(detailValues: detailValues)
+                profileModel.append(newAccount)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return profileModel
     }
     
     // MARK: - Write to JSON File
@@ -164,18 +155,6 @@ class ProfileJSON {
         }
     }
 
-    
-    func parseJSONData(jsonData: NSData?) -> [String : AnyObject] {
-        if let data = jsonData {
-            do {
-                let jsonDictonary = try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers) as? [String : AnyObject]
-                return jsonDictonary!
-            } catch let error as NSError {
-                print("error parsing json data: \(error.localizedDescription)")
-            }
-        }
-        return [:]
-    }
 
 extension ProfileJSON {
     

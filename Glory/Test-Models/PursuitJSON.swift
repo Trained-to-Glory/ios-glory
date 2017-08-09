@@ -3,72 +3,97 @@ import Foundation
 class PursuitJSON {
     
     var rawData: NSData! = nil
+    var pursuitId : String?
+    var userId : String?
+    var photo : String?
+    var created : String?
+    var title : String?
+    var isVisible : String?
+    var description : String?
+    var isPurchased : String?
+    var stepId : String?
+    var isComplete : String?
+    var position : String?
+    var text : String?
     
+    init(pursuitId: String, userId: String, photo: String, isVisible: String, created: String){
+        self.pursuitId = pursuitId
+        self.created = created
+        self.userId = userId
+        self.photo = photo
+        self.isVisible = isVisible
+    }
+    
+    init(pursuitValues: [String: AnyObject]){
+        self.pursuitId = pursuitValues["pursuitId"] as? String
+        self.userId = pursuitValues["userId"] as? String
+        self.photo = pursuitValues["photo"] as? String
+        self.created = pursuitValues["created"] as? String
+        self.title = pursuitValues["title"] as? String
+        self.isVisible = pursuitValues["isVisible"] as? String
+    }
+    
+    init(pursuitDetails: [String: AnyObject]) {
+        self.pursuitId = pursuitDetails["pursuitId"] as? String
+        self.userId = pursuitDetails["userId"] as? String
+        self.photo = pursuitDetails["photo"] as? String
+        self.created = pursuitDetails["created"] as? String
+        self.description = pursuitDetails["description"] as? String
+        self.title = pursuitDetails["title"] as? String
+        self.isVisible = pursuitDetails["isVisible"] as? String
+        self.isPurchased = pursuitDetails["isPurchased"] as? String
+    }
+    
+    init(pursuitSteps: [String: AnyObject]) {
+        self.pursuitId = pursuitSteps["pursuitId"] as? String
+        self.stepId = pursuitSteps["stepId"] as? String
+        self.position = pursuitSteps["position"] as? String
+        self.text = pursuitSteps["text"] as? String
+        self.isVisible = pursuitSteps["isVisible"] as? String
+        self.isComplete = pursuitSteps["isComplete"] as? String
+    }
     // MARK: - Read JSON Files
     
-    func readPursuitJson() {
+    static func readPursuitJson() -> [PursuitJSON] {
+        var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuit", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "pursuit") as! NSArray
-            for values in jsonArray {
-                let pursuitId = (values as AnyObject)["pursuitId"] as? String
-                let userId = (values as AnyObject)["userId"] as? String
-                let photo = (values as AnyObject)["photo"] as? String
-                let created = (values as AnyObject)["created"] as? String
-                let title = (values as AnyObject)["title"] as? String
-                let isVisible = (values as AnyObject)["isVisible"] as? String
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuit"] as! [[String : AnyObject]]
+            for pursuitVales in jsonArray {
+                let newPursuit = PursuitJSON(pursuitValues: pursuitVales)
+                pursuitModel.append(newPursuit)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return pursuitModel
     }
     
-    func readPursuitDetailsJson() {
+    static func readPursuitDetailsJson() -> [PursuitJSON] {
+        var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuitDetails", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "pursuitDetails") as! NSArray
-            for values in jsonArray {
-                let pursuitId = (values as AnyObject)["pursuitId"] as? String
-                let userId = (values as AnyObject)["userId"] as? String
-                let photo = (values as AnyObject)["photo"] as? String
-                let created = (values as AnyObject)["created"] as? String
-                let description = (values as AnyObject)["description"] as? String
-                let title = (values as AnyObject)["title"] as? String
-                let isVisible = (values as AnyObject)["isVisible"] as? String
-                let isPurchased = (values as AnyObject)["isPurchased"] as? String
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuitDetails"] as! [[String : AnyObject]]
+            for detailValues in jsonArray {
+                let newPursuit = PursuitJSON(pursuitDetails: detailValues)
+                pursuitModel.append(newPursuit)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return pursuitModel
     }
     
-    func readPursuitStepsJson() {
+    static func readPursuitStepsJson() -> [PursuitJSON]{
+        var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuitSteps", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
-        do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
-            NSDictionary
-            let jsonArray =  jsonResult.value(forKey: "pursuitSteps") as! NSArray
-            for values in jsonArray {
-                let pursuitId = (values as AnyObject)["pursuitId"] as? String
-                let stepId = (values as AnyObject)["stepId"] as? String
-                let position = (values as AnyObject)["position"] as? String
-                let text = (values as AnyObject)["text"] as? String
-                let isVisible = (values as AnyObject)["isVisible"] as? String
-                let isComplete = (values as AnyObject)["isComplete"] as? String
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuitSteps"] as! [[String : AnyObject]]
+            for pursuitSteps in jsonArray {
+                let newPursuit = PursuitJSON(pursuitSteps: pursuitSteps)
+                pursuitModel.append(newPursuit)
             }
-            
-        } catch {
-            print("error reading json")
         }
+        return pursuitModel
     }
     
     // MARK: - Write To JSON File
@@ -142,5 +167,21 @@ class PursuitJSON {
                 print("Method Failed")
             }
         }
+    }
+}
+
+extension PursuitJSON {
+    
+    static func parseJSONFromData(jsonData: NSData?) -> [String: AnyObject]? {
+        if let data = jsonData {
+            do {
+                let jsonDictionary = try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)
+                return jsonDictionary as! [String : AnyObject]
+                
+            } catch let error as NSError {
+                print("error processing: \(error.localizedDescription)")
+            }
+        }
+        return nil
     }
 }
