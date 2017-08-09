@@ -20,17 +20,18 @@ class SigninController: UIViewController {
     var tableDelegate : FormTableDelegate?
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AnyObject>?
     
-    var ProfileModel = ProfileJSON()
+    var profileModel = [ProfileJSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileModel = ProfileJSON.readListOfAccounts()
+        print("profile json \(String(describing: profileModel[0].userName))")
         // set up the navigation controller
         self.setUpNavigationController()
         // set up username and password UI if user pools enabled
         self.setUpUserPoolsUI()
         // set up background
         self.setUpBackground()
-        self.ProfileModel.readListOfAccounts()
     }
     
     func setUpUserPoolsUI() {
