@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "38264068D81C58FB1ED5F3BA320D0989DC1C913D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38264068D81C58FB1ED5F3BA320D0989DC1C913D" : 9223372036854775807,
+    "0481CF555D43C2D6E5BC0B93555ABCBA6CDB1DB3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "921077C6-B62B-4079-968C-591E82277B05",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38264068D81C58FB1ED5F3BA320D0989DC1C913D" : "Glory\/",
+    "0481CF555D43C2D6E5BC0B93555ABCBA6CDB1DB3" : "Lambda-Functions\/serverless-crud\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Glory",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Glory.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Trained-to-Glory\/Lambda-Functions.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0481CF555D43C2D6E5BC0B93555ABCBA6CDB1DB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Trained-to-Glory\/ios-glory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38264068D81C58FB1ED5F3BA320D0989DC1C913D"
+    }
+  ]
+}

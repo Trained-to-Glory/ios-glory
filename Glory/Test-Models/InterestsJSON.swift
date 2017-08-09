@@ -7,46 +7,38 @@ class InterestsJSON {
     // MARK: - Read JSON Files
     
     func readInterestsJson() {
+        let file = Bundle.main.path(forResource: "interests", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "interests", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "interests") as! NSArray
+            for values in jsonArray {
+                let interestsId = (values as AnyObject)["interestsId"] as? String
+                let interestsName = (values as AnyObject)["interestsName"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     
     func readUserInterestsJson() {
+        let file = Bundle.main.path(forResource: "userInterests", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "userInterests", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "userInterests") as! NSArray
+            for values in jsonArray {
+                let interestsId = (values as AnyObject)["interestsId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let interestsName = (values as AnyObject)["interestsName"] as? String
+                let isSelected = (values as AnyObject)["isSelected"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     

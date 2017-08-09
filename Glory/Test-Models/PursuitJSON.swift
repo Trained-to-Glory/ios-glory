@@ -7,68 +7,67 @@ class PursuitJSON {
     // MARK: - Read JSON Files
     
     func readPursuitJson() {
+        let file = Bundle.main.path(forResource: "pursuit", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "pursuit", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "pursuit") as! NSArray
+            for values in jsonArray {
+                let pursuitId = (values as AnyObject)["pursuitId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let photo = (values as AnyObject)["photo"] as? String
+                let created = (values as AnyObject)["created"] as? String
+                let title = (values as AnyObject)["title"] as? String
+                let isVisible = (values as AnyObject)["isVisible"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     
     func readPursuitDetailsJson() {
+        let file = Bundle.main.path(forResource: "pursuitDetails", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "pursuitDetails", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "pursuitDetails") as! NSArray
+            for values in jsonArray {
+                let pursuitId = (values as AnyObject)["pursuitId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let photo = (values as AnyObject)["photo"] as? String
+                let created = (values as AnyObject)["created"] as? String
+                let description = (values as AnyObject)["description"] as? String
+                let title = (values as AnyObject)["title"] as? String
+                let isVisible = (values as AnyObject)["isVisible"] as? String
+                let isPurchased = (values as AnyObject)["isPurchased"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     
     func readPursuitStepsJson() {
+        let file = Bundle.main.path(forResource: "pursuitSteps", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "pursuitSteps", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "pursuitSteps") as! NSArray
+            for values in jsonArray {
+                let pursuitId = (values as AnyObject)["pursuitId"] as? String
+                let stepId = (values as AnyObject)["stepId"] as? String
+                let position = (values as AnyObject)["position"] as? String
+                let text = (values as AnyObject)["text"] as? String
+                let isVisible = (values as AnyObject)["isVisible"] as? String
+                let isComplete = (values as AnyObject)["isComplete"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     

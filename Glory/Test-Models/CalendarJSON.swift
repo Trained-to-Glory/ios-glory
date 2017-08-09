@@ -7,46 +7,43 @@ class CalendarJSON {
     // MARK: - Read JSON Files
     
     func readCalendarJson() {
+        let file = Bundle.main.path(forResource: "calendar", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "calendar", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "eventId") as! NSArray
+            for values in jsonArray {
+                let eventId = (values as AnyObject)["eventId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let title = (values as AnyObject)["title"] as? String
+                let date = (values as AnyObject)["date"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     
     func readCalendarDetailsJson() {
+        let file = Bundle.main.path(forResource: "calendarDetails", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "calendarDetails", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "eventDetails") as! NSArray
+            for values in jsonArray {
+                let eventId = (values as AnyObject)["eventId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let reminder = (values as AnyObject)["reminder"] as? String
+                let startTime = (values as AnyObject)["startTime"] as? String
+                let endTime = (values as AnyObject)["endTime"] as? String
+                let allDay = (values as AnyObject)["allDay"] as? String
+                let isVisible = (values as AnyObject)["isVisible"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     

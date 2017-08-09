@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-nF-JBe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="263"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the users bio." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-fY-uey">
                                 <rect key="frame" x="109" y="323.5" width="157" height="20.5"/>
@@ -112,20 +112,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w0B-N4-ARD">
-                                <rect key="frame" x="138" y="74" width="100" height="100"/>
+                                <rect key="frame" x="138" y="78" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="04j-em-rXk"/>
                                     <constraint firstAttribute="width" constant="100" id="0NO-fc-bWb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-t4-rfN">
-                                <rect key="frame" x="16" y="253" width="343" height="21"/>
+                                <rect key="frame" x="16" y="257" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4yR-fg-pI3">
-                                <rect key="frame" x="16" y="282" width="333" height="17"/>
+                                <rect key="frame" x="16" y="286" width="333" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -134,13 +134,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-tw-EQW">
-                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <rect key="frame" x="16" y="327" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-gg-08Z">
-                                <rect key="frame" x="16" y="352" width="333" height="17"/>
+                                <rect key="frame" x="16" y="356" width="333" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -149,19 +149,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZy-hT-8Pi">
-                                <rect key="frame" x="16" y="476" width="333" height="21"/>
+                                <rect key="frame" x="16" y="480" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txP-0J-xZR">
-                                <rect key="frame" x="16" y="392" width="333" height="21"/>
+                                <rect key="frame" x="16" y="396" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Bio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-2h-90s">
-                                <rect key="frame" x="16" y="421" width="333" height="17"/>
+                                <rect key="frame" x="16" y="425" width="333" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -170,31 +170,31 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-nC-rNf">
-                                <rect key="frame" x="16" y="505" width="333" height="17"/>
+                                <rect key="frame" x="16" y="509" width="333" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM2-XM-zsb">
-                                <rect key="frame" x="16" y="545" width="343" height="21"/>
+                                <rect key="frame" x="16" y="549" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCv-Gh-Y0v">
-                                <rect key="frame" x="16" y="574" width="343" height="17"/>
+                                <rect key="frame" x="16" y="578" width="343" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEm-u7-raS">
-                                <rect key="frame" x="16" y="614" width="343" height="21"/>
+                                <rect key="frame" x="16" y="618" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGo-nO-Fsi">
-                                <rect key="frame" x="16" y="643" width="343" height="17"/>
+                                <rect key="frame" x="16" y="647" width="343" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

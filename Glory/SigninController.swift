@@ -20,7 +20,7 @@ class SigninController: UIViewController {
     var tableDelegate : FormTableDelegate?
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AnyObject>?
     
-    let ProfileModel = ProfileJSON()
+    var ProfileModel = ProfileJSON()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class SigninController: UIViewController {
         self.setUpUserPoolsUI()
         // set up background
         self.setUpBackground()
+        self.ProfileModel.readListOfAccounts()
     }
     
     func setUpUserPoolsUI() {
@@ -62,9 +63,6 @@ class SigninController: UIViewController {
             cancelButton.tintColor = UIColor.white
             self.navigationController?.navigationBar.topItem?.leftBarButtonItem = cancelButton;
         }
-        self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-        ]
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.tintColor = UIColor.white

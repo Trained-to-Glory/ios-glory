@@ -7,46 +7,57 @@ class PostJSON {
     // MARK: - Read JSON Files
     
     func readPostJson() {
+        let file = Bundle.main.path(forResource: "posts", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "posts", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "posts") as! NSArray
+            for values in jsonArray {
+                let postId = (values as AnyObject)["postId"] as? String
+                let userId = (values as AnyObject)["userId"] as? String
+                let photo = (values as AnyObject)["photo"] as? String
+                let created = (values as AnyObject)["created"] as? String
+                let description = (values as AnyObject)["description"] as? String
+                let isVisible = (values as AnyObject)["isVisible"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
         }
     }
     
     func readPostEngagementsJson() {
+        let file = Bundle.main.path(forResource: "engagements", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
         do {
-            if let file = Bundle.main.path(forResource: "engagements", ofType: "json") {
-                let data : NSData =  try NSData(contentsOfFile: file)
-                let json = try JSONSerialization.jsonObject(with: data as Data, options: [])
-                if let object = json as? [String: Any] {
-                    // json is a dictionary
-                    print(object)
-                } else if let object = json as? [Any] {
-                    // json is an array
-                    print(object)
-                } else {
-                    print("JSON is invalid")
-                }
-            } else {
-                print("no file")
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "engagementCount") as! NSArray
+            for values in jsonArray {
+                let totalLikes = (values as AnyObject)["totalLikes"] as? String
+                let totalComments = (values as AnyObject)["totalComments"] as? String
             }
+            
         } catch {
-            print(error.localizedDescription)
+            print("error reading json")
+        }
+    }
+    
+    
+    func readPostCommentsJson() {
+        let file = Bundle.main.path(forResource: "engagements", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        do {
+            let jsonResult = try JSONSerialization.jsonObject(with: data! as Data, options: .mutableContainers) as!
+            NSDictionary
+            let jsonArray =  jsonResult.value(forKey: "comment") as! NSArray
+            for values in jsonArray {
+                let commentText = (values as AnyObject)["commentText"] as? String
+            }
+            
+        } catch {
+            print("error reading json")
         }
     }
     
