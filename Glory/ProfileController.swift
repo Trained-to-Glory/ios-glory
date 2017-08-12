@@ -4,6 +4,10 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var userBio: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+   
+    var profileModel = [ProfileJSON]()
+    var profileDetails = [ProfileJSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +62,16 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Get Account Info
+    
+    func getAccount(){
+        profileModel = ProfileJSON.readListOfAccounts()
+        profileDetails = ProfileJSON.readAccountDetailJson()
+        profilePicture.image = UIImage(named: profileModel[0].userPhoto!)
+        userBio.text = profileDetails[0].userBio
+        userName.text = profileModel[0].userName
     }
     
 }
