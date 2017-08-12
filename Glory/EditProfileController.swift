@@ -12,25 +12,16 @@ class EditProfileController: UIViewController {
         // Data Model Call
     }
     
+    var profileModel = [ProfileJSON]()
+    var profileDetails = [ProfileJSON]()
     var userDescription : String!
     var accountUserName : String!
     var accountFullName : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Load account info
-        getAccountDetails()
-    }
-    
-    // MARK: - Get Account Details
-    
-    func getAccountDetails(){
-        // Set the Data Model Call to var's
-        fullName.text = accountFullName
-        userName.text = accountUserName
-        userBio.text = userDescription
-        profilePicture.image = #imageLiteral(resourceName: "batman")
+        getAccount()
     }
     
     // Capture profile changes
@@ -62,10 +53,15 @@ class EditProfileController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: - Update Password
+    // MARK: - Get Account Details
     
-    func updateUserPassword(){
-        
+    func getAccount(){
+        profileDetails = ProfileJSON.readAccountDetailJson()
+        profileModel = ProfileJSON.readListOfAccounts()
+        fullName.text = profileModel[0].fullName
+        userName.text = profileModel[0].userName
+        userBio.text = profileModel[0].userBio
+        profilePicture.image = UIImage(named: profileModel[0].userPhoto!)
     }
 
 }

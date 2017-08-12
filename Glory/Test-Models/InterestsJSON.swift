@@ -40,7 +40,7 @@ class InterestsJSON {
         return interestsModel
     }
     
-    static func readUserInterestsJson() -> [InterestsJSON] {
+    static func readUserInterestsJson(userId : String) -> [InterestsJSON] {
         var interestsModel = [InterestsJSON]()
         let file = Bundle.main.path(forResource: "userInterests", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)

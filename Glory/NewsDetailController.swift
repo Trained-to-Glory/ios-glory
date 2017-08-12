@@ -1,12 +1,17 @@
 import UIKit
 
 class NewsDetailController: UIViewController {
-
+    
+    var postModel = [PostJSON]()
+    var postId = "id-3"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-
+    // MARK: - Get Post
+    
+    func getPost(){
+        postModel = PostJSON.readPostJson(postId: postId)
+    }
 }

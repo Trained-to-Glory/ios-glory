@@ -1,11 +1,17 @@
 import UIKit
 
 class StatSheetController: UIViewController {
+    
+    var statModel = [PursuitJSON]()
+    var pursuitId = "id-2"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    // MARK: - Get Pursuit Stats
+    
+    func getPursuitStats(){
+        statModel = PursuitJSON.readPursuitStepsJson(pursuitId: pursuitId)
+    }
 }

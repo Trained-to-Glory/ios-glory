@@ -2,10 +2,16 @@ import UIKit
 
 class CommentsController: UIViewController {
 
+    var commentsModel = [PostJSON]()
+    var postId = "id-3"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    // MARK: - Get Comments 
+    
+    func getComments(){
+        commentsModel = PostJSON.readPostCommentsJson(postId: postId)
+    }
 }

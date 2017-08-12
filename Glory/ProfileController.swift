@@ -8,12 +8,14 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate {
    
     var profileModel = [ProfileJSON]()
     var profileDetails = [ProfileJSON]()
+    var postModel = [PostJSON]()
+    var userId = "id-1"
+    var postArray : Array<Any> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get Users Account Info
-        userBio.text = "Some words"
-        profilePicture.image = #imageLiteral(resourceName: "batman")
+        getAccount()
     }
     
     // MARK: - Create/Update Profile Picture
@@ -69,9 +71,11 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate {
     func getAccount(){
         profileModel = ProfileJSON.readListOfAccounts()
         profileDetails = ProfileJSON.readAccountDetailJson()
+        postModel = PostJSON.readUserPostJson(userId: userId)
         profilePicture.image = UIImage(named: profileModel[0].userPhoto!)
         userBio.text = profileDetails[0].userBio
         userName.text = profileModel[0].userName
     }
+    
     
 }

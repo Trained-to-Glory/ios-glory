@@ -12,6 +12,10 @@ class PostJSON {
     var totalLikes : String?
     var totalComments : String?
     var commentText : String?
+    var likeUserName : String?
+    var likePhoto : String?
+    var likeFullName : String?
+    var isLiked : String?
 
     init(postId: String, userId: String, photo: String, isVisible: String, created: String, description : String){
         self.postId = postId
@@ -40,9 +44,45 @@ class PostJSON {
         self.commentText = postComments["commentText"] as? String
     }
     
+    init(postLikes: [String: AnyObject]){
+        self.likeUserName = postLikes["likeUserName"] as? String
+        self.likePhoto = postLikes["likePhoto"] as? String
+        self.likeFullName = postLikes["likeFullName"] as? String
+        self.created = postLikes["created"] as? String
+        self.isLiked = postLikes["isLiked"] as? String
+    }
+    
     // MARK: - Read JSON Files
     
-    static func readPostJson() -> [PostJSON]{
+    static func readListOfPostJson() -> [PostJSON]{
+        var postModel = [PostJSON]()
+        let file = Bundle.main.path(forResource: "posts", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["posts"] as! [[String : AnyObject]]
+            for values in jsonArray {
+                let newPost = PostJSON(postData: values)
+                postModel.append(newPost)
+            }
+        }
+        return postModel
+    }
+    
+    static func readPostJson(postId: String) -> [PostJSON]{
+        var postModel = [PostJSON]()
+        let file = Bundle.main.path(forResource: "posts", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["posts"] as! [[String : AnyObject]]
+            for values in jsonArray {
+                let newPost = PostJSON(postData: values)
+                postModel.append(newPost)
+            }
+        }
+        return postModel
+    }
+    
+    static func readUserPostJson(userId: String) -> [PostJSON]{
         var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "posts", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
@@ -71,7 +111,7 @@ class PostJSON {
     }
     
     
-    static func readPostCommentsJson() -> [PostJSON] {
+    static func readPostCommentsJson(postId: String) -> [PostJSON] {
         var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "engagements", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
@@ -79,6 +119,20 @@ class PostJSON {
             let jsonArray = jsonDictionary["comment"] as! [[String : AnyObject]]
             for values in jsonArray {
                 let newPost = PostJSON(postComments: values)
+                postModel.append(newPost)
+            }
+        }
+        return postModel
+    }
+    
+    static func readPostLikesJson(postId: String) -> [PostJSON] {
+        var postModel = [PostJSON]()
+        let file = Bundle.main.path(forResource: "engagements", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PostJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["likes"] as! [[String : AnyObject]]
+            for values in jsonArray {
+                let newPost = PostJSON(postLikes: values)
                 postModel.append(newPost)
             }
         }

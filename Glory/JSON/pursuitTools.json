@@ -1,0 +1,21 @@
+{
+    "pursuitTools": [{
+      "pursuitId": 1,
+      "toolId": 5,
+      "text": "Some words",
+      "photo": "goal-photo",
+      "isVisible": true
+    },{
+      "pursuitId": 1,
+      "toolId": 5,
+      "text": "More words",
+      "photo": "goal-photo",
+      "isVisible": true
+    },{
+      "pursuitId": 1,
+      "toolId": 5,
+      "text": "Foo",
+      "goal-photo": "goal-photo",
+      "isVisible": true
+    }]
+}

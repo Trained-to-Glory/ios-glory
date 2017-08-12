@@ -15,6 +15,7 @@ class PursuitJSON {
     var isComplete : String?
     var position : String?
     var text : String?
+    var toolId : String?
     
     init(pursuitId: String, userId: String, photo: String, isVisible: String, created: String){
         self.pursuitId = pursuitId
@@ -52,6 +53,15 @@ class PursuitJSON {
         self.isVisible = pursuitSteps["isVisible"] as? String
         self.isComplete = pursuitSteps["isComplete"] as? String
     }
+    
+    init(pursuitTools: [String: AnyObject]) {
+        self.pursuitId = pursuitTools["pursuitId"] as? String
+        self.toolId = pursuitTools["toolId"] as? String
+        self.photo = pursuitTools["photo"] as? String
+        self.text = pursuitTools["text"] as? String
+        self.isVisible = pursuitTools["isVisible"] as? String
+    }
+    
     // MARK: - Read JSON Files
     
     static func readPursuitJson() -> [PursuitJSON] {
@@ -82,7 +92,7 @@ class PursuitJSON {
         return pursuitModel
     }
     
-    static func readPursuitStepsJson() -> [PursuitJSON]{
+    static func readPursuitStepsJson(pursuitId: String) -> [PursuitJSON]{
         var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuitSteps", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
@@ -90,6 +100,20 @@ class PursuitJSON {
             let jsonArray = jsonDictionary["pursuitSteps"] as! [[String : AnyObject]]
             for pursuitSteps in jsonArray {
                 let newPursuit = PursuitJSON(pursuitSteps: pursuitSteps)
+                pursuitModel.append(newPursuit)
+            }
+        }
+        return pursuitModel
+    }
+    
+    static func readPursuitToolsJson() -> [PursuitJSON]{
+        var pursuitModel = [PursuitJSON]()
+        let file = Bundle.main.path(forResource: "pursuitTools", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuitTools"] as! [[String : AnyObject]]
+            for pursuitTools in jsonArray {
+                let newPursuit = PursuitJSON(pursuitTools: pursuitTools)
                 pursuitModel.append(newPursuit)
             }
         }

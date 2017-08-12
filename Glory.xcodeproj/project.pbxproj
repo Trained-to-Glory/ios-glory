@@ -126,6 +126,7 @@
 		E6BE5C951F2B9E7300CEB872 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C781F2B9E7200CEB872 /* AVKit.framework */; };
 		E6BE5C961F2B9E7300CEB872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE5C791F2B9E7200CEB872 /* Foundation.framework */; };
 		E6DD47E01EFEB106003079C4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD47DF1EFEB106003079C4 /* ProfileModel.swift */; };
+		E6F527701F3F800D0024E9A3 /* pursuitTools.json in Resources */ = {isa = PBXBuildFile; fileRef = E6F5276F1F3F800D0024E9A3 /* pursuitTools.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -281,6 +282,7 @@
 		E6BE5C781F2B9E7200CEB872 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		E6BE5C791F2B9E7200CEB872 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6DD47DF1EFEB106003079C4 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E6F5276F1F3F800D0024E9A3 /* pursuitTools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pursuitTools.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,6 +729,7 @@
 				E604F16F1F369BB10009AC7F /* pursuitDetails.json */,
 				E604F16D1F369BB10009AC7F /* pursuitSteps.json */,
 				E604F16C1F369BB10009AC7F /* userInterests.json */,
+				E6F5276F1F3F800D0024E9A3 /* pursuitTools.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				E619725E1EFD52C6008F1F43 /* Main.storyboard in Resources */,
 				E61972C21EFDE2CB008F1F43 /* Settings.storyboard in Resources */,
 				E604F1731F369BB20009AC7F /* calendarDetails.json in Resources */,
+				E6F527701F3F800D0024E9A3 /* pursuitTools.json in Resources */,
 				E61972B21EFDE12C008F1F43 /* Systems.storyboard in Resources */,
 				E604F1771F369BB20009AC7F /* accountAdded.json in Resources */,
 				E604F1741F369BB20009AC7F /* posts.json in Resources */,

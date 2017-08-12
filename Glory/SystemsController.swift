@@ -1,11 +1,15 @@
 import UIKit
 
 class SystemsController: UIViewController {
+    
+    var pursuitModel = [PursuitJSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.timesTapped = 0
         self.progressBar.progress = 0
+        getListOfPursuits()
+        getTools()
     }
     
     // MARK: - Create Progress Bar
@@ -30,19 +34,15 @@ class SystemsController: UIViewController {
     }
     
     // MARK: - Get Pursuit/Pursuits
-    
-    func getPursuit(){
-        
-    }
-    
+
     func getListOfPursuits(){
-        
+        pursuitModel = PursuitJSON.readPursuitJson()
     }
     
     // MARK: - Get tools
     
     func getTools(){
-        
+        pursuitModel = PursuitJSON.readPursuitToolsJson()
     }
     
 }
