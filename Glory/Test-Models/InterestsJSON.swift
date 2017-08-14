@@ -7,6 +7,7 @@ class InterestsJSON {
     var interestsName : String?
     var userId : String?
     var isSelected : String?
+    var interests : [String : AnyObject]?
     
     init(interestsId : String, interestsName : String){
         self.interestsId = interestsId
@@ -20,9 +21,10 @@ class InterestsJSON {
     
     init(userInterests : [String : AnyObject]){
         self.interestsId = userInterests["interestsId"] as? String
-        self.userId = userInterests["userId"] as? String
-        self.interestsName = userInterests["interestsName"] as? String
-        self.isSelected = userInterests["isSelected"] as? String
+        self.interests = userInterests["interests"] as? [String : AnyObject]
+        self.userId = interests?["userId"] as? String
+        self.interestsName = interests?["interestsName"] as? String
+        self.isSelected = interests?["isSelected"] as? String
     }
     // MARK: - Read JSON Files
     

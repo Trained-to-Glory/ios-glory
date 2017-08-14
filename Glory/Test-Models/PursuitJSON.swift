@@ -16,6 +16,10 @@ class PursuitJSON {
     var position : String?
     var text : String?
     var toolId : String?
+    var fullName : String?
+    var userPhoto : String?
+    var userName : String?
+    var users : [String : AnyObject]?
     
     init(pursuitId: String, userId: String, photo: String, isVisible: String, created: String){
         self.pursuitId = pursuitId
@@ -62,9 +66,32 @@ class PursuitJSON {
         self.isVisible = pursuitTools["isVisible"] as? String
     }
     
+    init(pursuitPeople: [String: AnyObject]) {
+        self.pursuitId = pursuitPeople["pursuitId"] as? String
+        self.users = pursuitPeople["users"] as? [String : AnyObject]
+        self.userId = users?["userId"] as? String
+        self.userName = users?["userName"] as? String
+        self.userPhoto = users?["userPhoto"] as? String
+        self.fullName = users?["fullName"] as? String
+    }
+    
     // MARK: - Read JSON Files
     
     static func readPursuitJson() -> [PursuitJSON] {
+        var pursuitModel = [PursuitJSON]()
+        let file = Bundle.main.path(forResource: "pursuit", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuit"] as! [[String : AnyObject]]
+            for pursuitVales in jsonArray {
+                let newPursuit = PursuitJSON(pursuitValues: pursuitVales)
+                pursuitModel.append(newPursuit)
+            }
+        }
+        return pursuitModel
+    }
+    
+    static func readUserPursuitJson(userId: String) -> [PursuitJSON] {
         var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuit", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)
@@ -106,7 +133,21 @@ class PursuitJSON {
         return pursuitModel
     }
     
-    static func readPursuitToolsJson() -> [PursuitJSON]{
+    static func readPursuitPeopleJson(pursuitId: String) -> [PursuitJSON]{
+        var pursuitModel = [PursuitJSON]()
+        let file = Bundle.main.path(forResource: "pursuit", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = PursuitJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["pursuitPeople"] as! [[String : AnyObject]]
+            for pursuitPeople in jsonArray {
+                let newPursuit = PursuitJSON(pursuitPeople: pursuitPeople)
+                pursuitModel.append(newPursuit)
+            }
+        }
+        return pursuitModel
+    }
+    
+    static func readPursuitToolsJson(pursuitId: String) -> [PursuitJSON]{
         var pursuitModel = [PursuitJSON]()
         let file = Bundle.main.path(forResource: "pursuitTools", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)

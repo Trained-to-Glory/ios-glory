@@ -60,7 +60,21 @@ class ProfileJSON {
     return profileModel
 }
     
-    static func readAccountDetailJson() -> [ProfileJSON] {
+    static func readAccount(userId: String) -> [ProfileJSON]{
+        var profileModel = [ProfileJSON]()
+        let file = Bundle.main.path(forResource: "accounts", ofType: "json")
+        let data : NSData? = NSData(contentsOfFile: file!)
+        if let jsonDictionary = ProfileJSON.parseJSONFromData(jsonData: data){
+            let jsonArray = jsonDictionary["account"] as! [[String : AnyObject]]
+            for values in jsonArray {
+                let newAccount = ProfileJSON(values: values)
+                profileModel.append(newAccount)
+            }
+        }
+        return profileModel
+    }
+    
+    static func readAccountDetailJson(userId: String) -> [ProfileJSON] {
         var profileModel = [ProfileJSON]()
         let file = Bundle.main.path(forResource: "accountDetails", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)

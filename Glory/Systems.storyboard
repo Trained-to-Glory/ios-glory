@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rhc-h3-zvb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rhc-h3-zvb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,20 +21,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="apC-BF-Bwz">
-                                <rect key="frame" x="16" y="183" width="150" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="apC-BF-Bwz">
+                                <rect key="frame" x="112" y="94" width="151" height="2"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-s3-Mfr">
-                                <rect key="frame" x="68" y="224" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-s3-Mfr">
+                                <rect key="frame" x="156" y="115" width="63" height="30"/>
                                 <state key="normal" title="Tap Me"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Xlb-vV-Zji" eventType="touchUpInside" id="WN7-HA-iJo"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-dN-FMZ">
+                                <rect key="frame" x="0.0" y="153" width="375" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pursuitCell" rowHeight="98" id="EgC-mn-cb0" customClass="PursuitTableViewCell" customModule="Glory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EgC-mn-cb0" id="JiK-dJ-jww">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6V-FS-hmK">
+                                                    <rect key="frame" x="8" y="0.0" width="127" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pursuitImageView" destination="o6V-FS-hmK" id="E41-rx-yCG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mIx-TP-2UG" firstAttribute="top" secondItem="wcA-dN-FMZ" secondAttribute="bottom" constant="208" id="6d8-zd-vOq"/>
+                            <constraint firstItem="apC-BF-Bwz" firstAttribute="leading" secondItem="OA1-EH-MPa" secondAttribute="leading" constant="112" id="A1b-qe-dW9"/>
+                            <constraint firstItem="wcA-dN-FMZ" firstAttribute="leading" secondItem="OA1-EH-MPa" secondAttribute="leading" id="N68-AK-5z6"/>
+                            <constraint firstItem="p8E-s3-Mfr" firstAttribute="top" secondItem="apC-BF-Bwz" secondAttribute="bottom" constant="19" id="O2X-x5-UbA"/>
+                            <constraint firstAttribute="trailing" secondItem="p8E-s3-Mfr" secondAttribute="trailing" constant="156" id="XhP-hi-JQw"/>
+                            <constraint firstAttribute="trailing" secondItem="wcA-dN-FMZ" secondAttribute="trailing" id="Y94-RT-uQu"/>
+                            <constraint firstItem="wcA-dN-FMZ" firstAttribute="top" secondItem="p8E-s3-Mfr" secondAttribute="bottom" constant="8" id="dmd-5X-WIb"/>
+                            <constraint firstAttribute="trailing" secondItem="apC-BF-Bwz" secondAttribute="trailing" constant="112" id="wgf-3Q-iKH"/>
+                            <constraint firstItem="p8E-s3-Mfr" firstAttribute="leading" secondItem="OA1-EH-MPa" secondAttribute="leading" constant="156" id="wkP-Bt-8T4"/>
+                            <constraint firstItem="apC-BF-Bwz" firstAttribute="top" secondItem="iCc-8f-tZt" secondAttribute="bottom" constant="30" id="xWr-Vv-lh0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t8g-RL-gQ8">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Rr2-Be-Lvl">
@@ -60,6 +93,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="progressBar" destination="apC-BF-Bwz" id="bj7-YT-Qp7"/>
+                        <outlet property="pursuitTableView" destination="wcA-dN-FMZ" id="VJg-A6-QnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TN4-vw-HgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,15 +112,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-W7-KFb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-W7-KFb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="R1J-7Q-eep">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="76" id="R1J-7Q-eep">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1J-7Q-eep" id="upJ-mS-L6I">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -131,7 +165,7 @@
                     <tabBarItem key="tabBarItem" title="Systems" id="SsZ-wG-JZf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="az7-RD-WEE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="az7-RD-WEE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

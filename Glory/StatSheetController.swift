@@ -14,4 +14,6 @@ class StatSheetController: UIViewController {
     func getPursuitStats(){
         statModel = PursuitJSON.readPursuitStepsJson(pursuitId: pursuitId)
     }
+    
+    // MARK: - Write Calls
 }

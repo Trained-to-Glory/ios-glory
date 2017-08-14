@@ -3,7 +3,10 @@ import UIKit
 class NewsDetailController: UIViewController {
     
     var postModel = [PostJSON]()
-    var postId = "id-3"
+    var engagementsModel = [PostJSON]()
+    var commentsModel = [PostJSON]()
+    var likesModel = [PostJSON]()
+    var postId = "id-1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +14,12 @@ class NewsDetailController: UIViewController {
 
     // MARK: - Get Post
     
-    func getPost(){
+    func getSinglePost(){
         postModel = PostJSON.readPostJson(postId: postId)
+        engagementsModel = PostJSON.readPostEngagementsJson(postId: postId)
+        commentsModel = PostJSON.readPostCommentsJson(postId: postId)
+        likesModel = PostJSON.readPostLikesJson(postId: postId)
     }
+    
+    // MARK: - Toggle Calls
 }

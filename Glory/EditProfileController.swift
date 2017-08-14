@@ -14,9 +14,11 @@ class EditProfileController: UIViewController {
     
     var profileModel = [ProfileJSON]()
     var profileDetails = [ProfileJSON]()
+    var interestsModel = [InterestsJSON]()
     var userDescription : String!
     var accountUserName : String!
     var accountFullName : String!
+    var userId = "id-2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +58,15 @@ class EditProfileController: UIViewController {
     // MARK: - Get Account Details
     
     func getAccount(){
-        profileDetails = ProfileJSON.readAccountDetailJson()
-        profileModel = ProfileJSON.readListOfAccounts()
+        profileDetails = ProfileJSON.readAccountDetailJson(userId: userId)
+        profileModel = ProfileJSON.readAccount(userId: userId)
+        interestsModel = InterestsJSON.readUserInterestsJson(userId: userId)
         fullName.text = profileModel[0].fullName
         userName.text = profileModel[0].userName
         userBio.text = profileModel[0].userBio
         profilePicture.image = UIImage(named: profileModel[0].userPhoto!)
     }
+    
+    // MARK: - Write Account Info
 
 }

@@ -96,7 +96,7 @@ class PostJSON {
         return postModel
     }
     
-    static func readPostEngagementsJson() -> [PostJSON] {
+    static func readPostEngagementsJson(postId: String) -> [PostJSON] {
         var postModel = [PostJSON]()
         let file = Bundle.main.path(forResource: "engagements", ofType: "json")
         let data : NSData? = NSData(contentsOfFile: file!)

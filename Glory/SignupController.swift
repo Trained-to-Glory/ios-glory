@@ -26,8 +26,8 @@ class SignupController: UIViewController {
     }
     
     func setUp() {
-        passwordRow = FormTableCell(placeHolder: "Password", type: InputType.password)
         userNameRow = FormTableCell(placeHolder: "User Name", type: InputType.text)
+        passwordRow = FormTableCell(placeHolder: "Password", type: InputType.password)
         emailRow = FormTableCell(placeHolder: "Email", type: InputType.text)
         phoneNumberRow = FormTableCell(placeHolder: "Phone number", type: InputType.text)
         
