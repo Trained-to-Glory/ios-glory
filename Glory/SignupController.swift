@@ -14,6 +14,7 @@ class SignupController: UIViewController {
     @IBOutlet weak var tableFormView: UIView!
     
     var passwordRow : FormTableCell?
+    var fullNameRow : FormTableCell?
     var userNameRow : FormTableCell?
     var emailRow : FormTableCell?
     var phoneNumberRow: FormTableCell?
@@ -27,6 +28,7 @@ class SignupController: UIViewController {
     
     func setUp() {
         userNameRow = FormTableCell(placeHolder: "User Name", type: InputType.text)
+        fullNameRow = FormTableCell(placeHolder: "Full Name", type: InputType.text)
         passwordRow = FormTableCell(placeHolder: "Password", type: InputType.password)
         emailRow = FormTableCell(placeHolder: "Email", type: InputType.text)
         phoneNumberRow = FormTableCell(placeHolder: "Phone number", type: InputType.text)
@@ -34,6 +36,7 @@ class SignupController: UIViewController {
         tableDelegate = FormTableDelegate()
         tableDelegate?.add(cell: userNameRow!)
         tableDelegate?.add(cell: passwordRow!)
+        tableDelegate?.add(cell: fullNameRow!)
         tableDelegate?.add(cell: emailRow!)
         tableDelegate?.add(cell: phoneNumberRow!)
         tableView?.delegate = tableDelegate
@@ -121,6 +124,13 @@ class SignupController: UIViewController {
             })
             return nil
         }
+    }
+    
+    // MARK: - Save User Info
+    
+    func writeUserData(){
+        ProfileJSON.writeToAccountsJSON(accountUserName: (userNameRow?.staticText)!, accountFullName: (fullNameRow?.staticText)!, userId: nil)
+        ProfileJSON.writeToAccountDetailsJSON(userDescription: nil, email: (emailRow?.staticText)!)
     }
     
 }

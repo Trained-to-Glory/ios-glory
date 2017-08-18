@@ -81,6 +81,9 @@
 		E634F47D1F33695700062E68 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47C1F33695700062E68 /* PostJSON.swift */; };
 		E634F47F1F33699B00062E68 /* InterestsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F47E1F33699B00062E68 /* InterestsJSON.swift */; };
 		E634F4811F3369EE00062E68 /* PursuitJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F4801F3369EE00062E68 /* PursuitJSON.swift */; };
+		E63659B21F436F15007EE706 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63659B11F436F15007EE706 /* AWSMobileClient.swift */; };
+		E63659B41F43703E007EE706 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63659B31F43703E007EE706 /* AWSConfiguration.swift */; };
+		E63659B61F4370C4007EE706 /* AWSUserPoolsIdentityProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63659B51F4370C4007EE706 /* AWSUserPoolsIdentityProfile.swift */; };
 		E63A7E7D1F0EAFAF00AD6A98 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */; };
 		E68DE2A71F0EF66B00B55962 /* CalendarJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */; };
 		E6904F621F33BFFE00F2EEEB /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6904F611F33BFFE00F2EEEB /* ForgotController.swift */; };
@@ -250,6 +253,9 @@
 		E634F47C1F33695700062E68 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		E634F47E1F33699B00062E68 /* InterestsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsJSON.swift; sourceTree = "<group>"; };
 		E634F4801F3369EE00062E68 /* PursuitJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursuitJSON.swift; sourceTree = "<group>"; };
+		E63659B11F436F15007EE706 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		E63659B31F43703E007EE706 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		E63659B51F4370C4007EE706 /* AWSUserPoolsIdentityProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSUserPoolsIdentityProfile.swift; sourceTree = "<group>"; };
 		E63A7E7C1F0EAFAF00AD6A98 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
 		E68DE2A61F0EF66B00B55962 /* CalendarJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJSON.swift; sourceTree = "<group>"; };
 		E6904F611F33BFFE00F2EEEB /* ForgotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotController.swift; sourceTree = "<group>"; };
@@ -587,6 +593,9 @@
 				E619729A1EFD5EFC008F1F43 /* Profile */,
 				E61972991EFD5ED7008F1F43 /* Signup */,
 				E619729D1EFD5F44008F1F43 /* Systems */,
+				E63659B11F436F15007EE706 /* AWSMobileClient.swift */,
+				E63659B31F43703E007EE706 /* AWSConfiguration.swift */,
+				E63659B51F4370C4007EE706 /* AWSUserPoolsIdentityProfile.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -930,6 +939,7 @@
 				E619727A1EFD57C2008F1F43 /* SystemsController.swift in Sources */,
 				E6964AA91F414E6700CA9FE7 /* DiscoverPeopleTableViewCell.swift in Sources */,
 				E619728C1EFD5B6F008F1F43 /* CalendarController.swift in Sources */,
+				E63659B21F436F15007EE706 /* AWSMobileClient.swift in Sources */,
 				E6964A9B1F410A5000CA9FE7 /* InterestsTableViewCell.swift in Sources */,
 				E634F4811F3369EE00062E68 /* PursuitJSON.swift in Sources */,
 				E61641D11F2A9D860013849E /* UserPoolsUIHelper.swift in Sources */,
@@ -964,6 +974,7 @@
 				E6194CB71EFEB805004764D5 /* SearchModel.swift in Sources */,
 				E6DD47E01EFEB106003079C4 /* ProfileModel.swift in Sources */,
 				E61972591EFD52C6008F1F43 /* AppDelegate.swift in Sources */,
+				E63659B61F4370C4007EE706 /* AWSUserPoolsIdentityProfile.swift in Sources */,
 				E68DE2A71F0EF66B00B55962 /* CalendarJSON.swift in Sources */,
 				E61972961EFD5DB7008F1F43 /* PaymentCompleteController.swift in Sources */,
 				E61641CD1F2A9A9D0013849E /* FormTableCell.swift in Sources */,
@@ -974,6 +985,7 @@
 				E6194CB11EFEB744004764D5 /* CalendarModel.swift in Sources */,
 				E61972861EFD59CF008F1F43 /* CommentsController.swift in Sources */,
 				E61972901EFD5CB6008F1F43 /* MessagesController.swift in Sources */,
+				E63659B41F43703E007EE706 /* AWSConfiguration.swift in Sources */,
 				E6194CB51EFEB7D3004764D5 /* MessagesModel.swift in Sources */,
 				E619728A1EFD5B16008F1F43 /* FormsController.swift in Sources */,
 				E6964AA31F411A2D00CA9FE7 /* PursuitTableViewCell.swift in Sources */,

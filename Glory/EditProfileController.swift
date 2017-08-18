@@ -2,42 +2,36 @@ import UIKit
 
 class EditProfileController: UIViewController {
     
+    var profileModel = [ProfileJSON]()
+    var profileDetails = [ProfileJSON]()
+    var interestsModel = [InterestsJSON]()
+    var interestsNameModel = [InterestsJSON]()
+    var userDescription : String!
+    var accountUserName : String!
+    var accountFullName : String!
+    var userId = "id-4"
+    var interestsId = "id-4"
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userBio: UITextField!
     
-    @IBAction func saveChanges(_ sender: Any) {
-        // Data Model Call
-    }
+    // MARK: - Write Account Info
     
-    var profileModel = [ProfileJSON]()
-    var profileDetails = [ProfileJSON]()
-    var interestsModel = [InterestsJSON]()
-    var userDescription : String!
-    var accountUserName : String!
-    var accountFullName : String!
-    var userId = "id-2"
+    @IBAction func saveChanges(_ sender: Any) {
+        accountFullName = fullName.text
+        accountUserName = userName.text
+        userDescription = userBio.text
+        
+        ProfileJSON.writeToAccountsJSON(accountUserName: accountUserName, accountFullName: accountFullName, userId: userId)
+        ProfileJSON.writeToAccountDetailsJSON(userDescription: userDescription, email: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load account info
         getAccount()
-    }
-    
-    // Capture profile changes
-    
-    @IBAction func userBioChanged(_ sender: Any) {
-        self.userDescription = userBio.text!
-    }
-    
-    @IBAction func userNameChanged(_ sender: Any) {
-        self.accountUserName = userName.text!
-    }
-    
-    @IBAction func fullNameChanged(_ sender: Any) {
-        self.accountFullName = fullName.text!
     }
     
     // MARK: - Create/Update Profile Picture
@@ -47,7 +41,6 @@ class EditProfileController: UIViewController {
         profilePicture.contentMode = .scaleAspectFit
         profilePicture.image = chosenImage
         // Send image data to data model
-        
         dismiss(animated:true, completion: nil)
     }
     
@@ -61,12 +54,11 @@ class EditProfileController: UIViewController {
         profileDetails = ProfileJSON.readAccountDetailJson(userId: userId)
         profileModel = ProfileJSON.readAccount(userId: userId)
         interestsModel = InterestsJSON.readUserInterestsJson(userId: userId)
+        interestsNameModel = InterestsJSON.readUserInterestsNameJson(interestsId: interestsId)
         fullName.text = profileModel[0].fullName
         userName.text = profileModel[0].userName
         userBio.text = profileModel[0].userBio
         profilePicture.image = UIImage(named: profileModel[0].userPhoto!)
     }
     
-    // MARK: - Write Account Info
-
 }

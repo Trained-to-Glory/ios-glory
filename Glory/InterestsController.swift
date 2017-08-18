@@ -4,6 +4,8 @@ class InterestsController: UIViewController, UITableViewDataSource, UITableViewD
     
     var interestsModel = [InterestsJSON]()
     var interestName : String?
+    var interestsId = "id-3"
+    var userId = "id-3"
 
     @IBOutlet weak var interestsTableView: UITableView!
     
@@ -33,4 +35,8 @@ class InterestsController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     // MARK: - Select Interests
+    
+    func selectInterests(){
+        InterestsJSON.writeToUserInterestsJSON(interestsId: interestsId, isSelected: true, userId: userId)
+    }
 }

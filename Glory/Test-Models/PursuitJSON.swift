@@ -2,7 +2,6 @@ import Foundation
 
 class PursuitJSON {
     
-    var rawData: NSData! = nil
     var pursuitId : String?
     var userId : String?
     var photo : String?
@@ -163,8 +162,8 @@ class PursuitJSON {
     
     // MARK: - Write To JSON File
     
-    func writeToPursuitJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
+    static func writeToPursuitJSON (){
+        let dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
                                           "answers":["True", "False"],
                                           "correctIndex":0,
                                           "module":3,
@@ -174,10 +173,10 @@ class PursuitJSON {
         
         
             do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+                let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
                 try rawData.write(toFile: "JSON/pursuit.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/pursuit.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+                let jsonData = NSData(contentsOfFile: "JSON/pursuit.json")
+                _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
                 
             }  catch {
                 // Handle Error
@@ -185,7 +184,7 @@ class PursuitJSON {
             }
     }
     
-    func writeToPursuitDetailsJSON (){
+   static func writeToPursuitDetailsJSON (){
         var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
                                           "answers":["True", "False"],
                                           "correctIndex":0,
@@ -197,10 +196,10 @@ class PursuitJSON {
         
         if let jsonData = try? JSONSerialization.data(withJSONObject: dictonary, options: .init(rawValue: 0)) {
             do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+                let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
                 try rawData.write(toFile: "JSON/pursuitDetails.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/pursuitDetails.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+                let jsonData = NSData(contentsOfFile: "JSON/pursuitDetails.json")
+                _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
                 
             } catch {
                 // Handle Error
@@ -209,28 +208,27 @@ class PursuitJSON {
         }
     }
     
-    func writeToPursuitStepsJSON (){
-        let dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
-                                          "answers":["True", "False"],
-                                          "correctIndex":0,
-                                          "module":3,
-                                          "lesson":0,
-                                          "feedback":"Subclassing UIView gives your class the methods and properties of a basic view which can be placed onto the view."
+    static func writeToPursuitStepsJSON (pursuitId: String, stepId: String, isComplete: Bool, text: String, position: Int, isVisible: Bool){
+        let dictonary : [String : Any] = [
+            "pursuitId": pursuitId,
+            "steps": [
+                "stepId": stepId,
+                "isComplete": isComplete,
+                "text": text,
+                "position": position,
+                "isVisible": isVisible
+            ]
         ]
         
-        
-        if let jsonData = try? JSONSerialization.data(withJSONObject: dictonary, options: .init(rawValue: 0)) as? Data
-        {
-            do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
-                try rawData.write(toFile: "JSON/pursuitSteps.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/pursuitSteps.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+        do {
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            try rawData.write(toFile: "JSON/pursuitSteps.json", options: .atomic)
+            let jsonData = NSData(contentsOfFile: "JSON/pursuitSteps.json")
+            _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
                 
-            } catch {
-                // Handle Error
-                print("Method Failed")
-            }
+        } catch {
+            // Handle Error
+            print("Method Failed")
         }
     }
 }
@@ -241,8 +239,7 @@ extension PursuitJSON {
         if let data = jsonData {
             do {
                 let jsonDictionary = try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)
-                return jsonDictionary as! [String : AnyObject]
-                
+                return jsonDictionary as? [String : AnyObject]
             } catch let error as NSError {
                 print("error processing: \(error.localizedDescription)")
             }

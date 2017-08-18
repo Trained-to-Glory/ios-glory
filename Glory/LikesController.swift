@@ -4,6 +4,9 @@ class LikesController: UIViewController, UITableViewDataSource {
     
     var likesModel = [PostJSON]()
     var postId = "id-2"
+    var likeId = "id-3"
+    var created = 1234
+    var isLiked = true
     
     @IBOutlet weak var likeTableView: UITableView!
    
@@ -28,5 +31,8 @@ class LikesController: UIViewController, UITableViewDataSource {
     }
     
     // MARK: - Toggle Likes
+    func toggleLike(){
+        PostJSON.writeToPostLikesJSON(likeId: likeId, created: created, isLiked: isLiked)
+    }
     
 }

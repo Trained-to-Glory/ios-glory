@@ -2,7 +2,6 @@ import Foundation
 
 class PostJSON {
     
-    var rawData: NSData! = nil
     var postId : String?
     var userId : String?
     var photo : String?
@@ -141,8 +140,8 @@ class PostJSON {
     
     // MARK: - Write To JSON File
     
-    func writeToPostJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
+    static func writeToPostJSON (){
+        let dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
                                           "answers":["True", "False"],
                                           "correctIndex":0,
                                           "module":3,
@@ -150,12 +149,11 @@ class PostJSON {
                                           "feedback":"Subclassing UIView gives your class the methods and properties of a basic view which can be placed onto the view."
         ]
         
-        
             do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+                let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
                 try rawData.write(toFile: "JSON/posts.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/posts.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+                let jsonData = NSData(contentsOfFile: "JSON/posts.json")
+                _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
                 
             } catch {
                 // Handle Error
@@ -163,8 +161,8 @@ class PostJSON {
             }
     }
     
-    func writeToPostEngagementsJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
+    static func writeToPostEngagementsJSON (){
+        let dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
                                           "answers":["True", "False"],
                                           "correctIndex":0,
                                           "module":3,
@@ -174,15 +172,54 @@ class PostJSON {
         
         
             do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+               let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
                 try rawData.write(toFile: "JSON/engagements.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/engagements.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+                let jsonData = NSData(contentsOfFile: "JSON/engagements.json")
+                _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
                 
             } catch {
                 // Handle Error
                 print("Method Failed")
             }
+    }
+    
+    static func writeToPostLikesJSON (likeId : String, created : Int, isLiked: Bool){
+        let dictonary : [String : Any] = [
+            "likeId": likeId,
+            "created": created,
+            "isLiked": isLiked
+        ]
+        
+        do {
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            try rawData.write(toFile: "JSON/engagements.json", options: .atomic)
+            let jsonData = NSData(contentsOfFile: "JSON/engagements.json")
+            _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+            
+        } catch {
+            // Handle Error
+            print("Method Failed")
+        }
+    }
+    
+    static func writeToPostCommentsJSON (commentId: String, commentText: String, created: Int){
+        let dictonary : [String : Any] = [
+            "commentId": commentId,
+            "commentText": commentText,
+            "created": created
+        ]
+        
+        
+        do {
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            try rawData.write(toFile: "JSON/engagements.json", options: .atomic)
+            let jsonData = NSData(contentsOfFile: "JSON/engagements.json")
+            _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+            
+        } catch {
+            // Handle Error
+            print("Method Failed")
+        }
     }
 }
 

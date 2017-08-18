@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
-        // Stripe Configuration
-        STPPaymentConfiguration.shared().publishableKey = "pk_test_86ybhlRNQgVLyNlBjTp33Rqp"
         return true
     }
 

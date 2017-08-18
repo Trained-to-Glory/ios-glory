@@ -2,7 +2,6 @@ import Foundation
 
 class ProfileJSON {
     
-    var rawData: NSData! = nil
     var userName : String?
     var fullName : String?
     var isLeader : String?
@@ -104,51 +103,45 @@ class ProfileJSON {
     
     // MARK: - Write to JSON File
     
-    func writeToAccountsJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
-                                          "answers":["True", "False"],
-                                          "correctIndex":0,
-                                          "module":3,
-                                          "lesson":0,
-                                          "feedback":"Subclassing UIView gives your class the methods and properties of a basic view which can be placed onto the view."
+    static func writeToAccountsJSON (accountUserName: String, accountFullName: String, userId: String?) {
+        let dictonary : [String : Any] = [
+            "accountUserName": accountUserName,
+            "accountFullName": accountFullName,
+            "userId": userId!
         ]
         
-            do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
-                try rawData.write(toFile: "JSON/accounts.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/accounts.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
-                
-            } catch {
-                // Handle Error
-                print("Method Failed")
-            }
+        do {
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            try rawData.write(toFile: "JSON/accounts.json", options: .atomic)
+            let jsonData = NSData(contentsOfFile: "JSON/accounts.json")
+            _ = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+            
+        } catch {
+            // Handle Error
+            print("Method Failed")
+        }
     }
     
-    func writeToAccountDetailsJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
-                                          "answers":["True", "False"],
-                                          "correctIndex":0,
-                                          "module":3,
-                                          "lesson":0,
-                                          "feedback":"Subclassing UIView gives your class the methods and properties of a basic view which can be placed onto the view."
+    static func writeToAccountDetailsJSON (userDescription: String?, email : String?){
+        let dictonary : [String : Any] = [
+            "userDescription": userDescription,
+            "email": email!
         ]
         
-        
-            do {
-                rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
-                try rawData.write(toFile: "JSON/accountDetails.json", options: .atomic)
-                var jsonData = NSData(contentsOfFile: "JSON/accountDetails.json")
-                var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
-                
-            } catch {
-                // Handle Error
-                print("Method Failed")
-            }
+        do {
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            try rawData.write(toFile: "JSON/accountDetails.json", options: .atomic)
+            var jsonData = NSData(contentsOfFile: "JSON/accountDetails.json")
+            var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)
+            
+        } catch {
+            // Handle Error
+            print("Method Failed")
+        }
     }
     
-    func writeToAccountAddedJSON (){
-        var dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
+    static func writeToAccountAddedJSON (){
+        let dictonary : [String : Any] = ["question":"If you want to create a custom class which can be displayed on the view, you can subclass UIView.",
                                           "answers":["True", "False"],
                                           "correctIndex":0,
                                           "module":3,
@@ -157,7 +150,7 @@ class ProfileJSON {
         ]
         
         do {
-            rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
+            let rawData = try JSONSerialization.data(withJSONObject: dictonary, options: .prettyPrinted) as NSData
             try rawData.write(toFile: "JSON/accountAdded.json", options: .atomic)
             var jsonData = NSData(contentsOfFile: "JSON/accountAdded.json")
             var jsonDict = try JSONSerialization.jsonObject(with: jsonData! as Data, options: .mutableContainers)

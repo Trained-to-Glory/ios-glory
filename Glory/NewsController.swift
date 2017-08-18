@@ -10,6 +10,8 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
     }
     
+    // MARK: - Get Posts
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postModel.count
     }
@@ -23,7 +25,6 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
-    // MARK: - Get Posts
 
     
 }

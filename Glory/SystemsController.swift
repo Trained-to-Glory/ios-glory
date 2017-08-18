@@ -37,7 +37,7 @@ class SystemsController: UIViewController, UITableViewDataSource {
         
     }
     
-    // MARK: - Get Pursuit/Pursuits
+    // MARK: - Get Pursuit/Pursuits and Tools
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         pursuitModel = PursuitJSON.readUserPursuitJson(userId: userId)
@@ -56,10 +56,8 @@ class SystemsController: UIViewController, UITableViewDataSource {
         pursuitModel = PursuitJSON.readUserPursuitJson(userId: userId)
     }
     
-    // MARK: - Get Tools
-    
     func getTools(){
         pursuitModel = PursuitJSON.readPursuitToolsJson(pursuitId: pursuitId)
     }
-    
+        
 }

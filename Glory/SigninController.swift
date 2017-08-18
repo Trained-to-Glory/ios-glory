@@ -24,11 +24,6 @@ class SigninController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileModel = ProfileJSON.readListOfAccounts()
-        print(profileModel)
-        for info in profileModel {
-            print(info.fullName!)
-        }
         // set up the navigation controller
         self.setUpNavigationController()
         // set up username and password UI if user pools enabled

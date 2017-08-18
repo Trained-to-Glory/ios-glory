@@ -7,6 +7,13 @@ class NewsDetailController: UIViewController {
     var commentsModel = [PostJSON]()
     var likesModel = [PostJSON]()
     var postId = "id-1"
+    var likeId = "id-2"
+    var likeUserName = "foo"
+    var created = 1234
+    var isLiked = true
+    var commentId = "id-4"
+    var commentText = "Some words"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +29,12 @@ class NewsDetailController: UIViewController {
     }
     
     // MARK: - Toggle Calls
+    
+    func toggleLike(){
+        PostJSON.writeToPostLikesJSON(likeId: likeId, created: created, isLiked: isLiked)
+    }
+    
+    func createComment(){
+        PostJSON.writeToPostCommentsJSON(commentId: commentId, commentText: commentText, created: created)
+    }
 }

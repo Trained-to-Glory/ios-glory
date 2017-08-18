@@ -4,6 +4,9 @@ class CommentsController: UIViewController, UITableViewDataSource {
 
     var commentsModel = [PostJSON]()
     var postId = "id-1"
+    var commentId = "id-3"
+    var commentText = "Some words"
+    var created = 2334
     
     @IBOutlet weak var commentsTable: UITableView!
    
@@ -27,7 +30,8 @@ class CommentsController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-
-    
     // MARK: - Write Comments
+    func createComment(){
+        PostJSON.writeToPostCommentsJSON(commentId: commentId, commentText: commentText, created: created)
+    }
 }
